@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SunbeamLatestAFService_Example' do
+  pod 'SunbeamLatestAFService', :path => '../'
+
+  target 'SunbeamLatestAFService_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
