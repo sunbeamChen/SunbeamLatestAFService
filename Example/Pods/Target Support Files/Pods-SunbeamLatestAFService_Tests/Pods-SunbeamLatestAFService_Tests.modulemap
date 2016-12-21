@@ -1,0 +1,6 @@
+framework module Pods_SunbeamLatestAFService_Tests {
+  umbrella header "Pods-SunbeamLatestAFService_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
