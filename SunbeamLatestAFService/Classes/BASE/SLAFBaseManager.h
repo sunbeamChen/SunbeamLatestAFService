@@ -80,7 +80,7 @@
 
 @end
 
-@interface SLAFBaseManager : NSObject <SLAFManagerProtocol, SLAFRequestParams, SLAFRequestParamsValidator, SLAFRequestInterceptor, SLAFResponseDataFormatter, SLAFResponseDataValidator>
+@interface SLAFBaseManager : NSObject
 
 @property (nonatomic, weak) NSObject<SLAFManagerProtocol>* childManager;
 
@@ -99,10 +99,10 @@
 @property (nonatomic, strong) SLAFResponse* managerResponse;
 
 // 数据请求入口
-- (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id jsonData, NSError* error)) completion;
+- (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id responseObject, NSError* error)) completion;
 
 // 上传请求入口
-- (NSNumber *) loadUploadTask:(NSMutableDictionary *) uploadFiles uploadProgress:(void (^)(NSProgress *uploadProgress)) uploadProgress completion:(void(^)(NSString* identfier, id jsonData, NSError* error)) completion;
+- (NSNumber *) loadUploadTask:(NSMutableDictionary *) uploadFiles uploadProgress:(void (^)(NSProgress *uploadProgress)) uploadProgress completion:(void(^)(NSString* identfier, id responseObject, NSError* error)) completion;
 
 // 下载请求入口
 - (NSNumber *) loadDownloadTask:(void (^)(NSProgress *uploadProgress)) downloadProgress completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion;

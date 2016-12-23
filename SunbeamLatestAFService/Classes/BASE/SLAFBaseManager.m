@@ -55,7 +55,7 @@
  @param completion 回调
  @return 请求id
  */
-- (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id jsonData, NSError* error)) completion
+- (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id responseObject, NSError* error)) completion
 {
     // 网络检测等
     NSError* error = [self beforeRequest];
@@ -73,14 +73,14 @@
         return [[SLAFHTTPClient sharedSLAFHTTPClient] loadDataTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params completion:^(SLAFResponse *response) {
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
             if (response.error == nil) {
-                // 请求成功
-                id jsonData = [strongSelf formatResponseData:strongSelf];
+                // 成功
+                id jsonData = [strongSelf formatResponseData];
                 completion(strongSelf.childManager.identifier, jsonData, nil);
                 if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                     [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
                 }
             } else {
-                // 请求失败
+                // 失败
                 completion(strongSelf.childManager.identifier, nil, response.error);
                 if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
                     [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
@@ -91,11 +91,10 @@
         completion(self.childManager.identifier, nil, [NSError errorWithDomain:SLAF_ERROR_DOMAIN code:REQUEST_METHOD_NOT_SUPPORT userInfo:@{NSLocalizedDescriptionKey:@"request method not support"}]);
         return SAF_REQUEST_ID_DEFAULT;
     }
-    
 }
 
 // 上传请求入口
-- (NSNumber *) loadUploadTask:(NSMutableDictionary *) uploadFiles uploadProgress:(void (^)(NSProgress *uploadProgress)) uploadProgress completion:(void(^)(NSString* identfier, id jsonData, NSError* error)) completion
+- (NSNumber *) loadUploadTask:(NSMutableDictionary *) uploadFiles uploadProgress:(void (^)(NSProgress *uploadProgress)) uploadProgress completion:(void(^)(NSString* identfier, id responseObject, NSError* error)) completion
 {
     // 网络检测等
     NSError* error = [self beforeRequest];
@@ -113,7 +112,7 @@
         __strong __typeof__(weakSelf) strongSelf = weakSelf;
         if (response.error == nil) {
             // 成功
-            id jsonData = [strongSelf formatResponseData:strongSelf];
+            id jsonData = [strongSelf formatResponseData];
             completion(strongSelf.childManager.identifier, jsonData, nil);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
@@ -191,11 +190,11 @@
  @param formatter 格式化方法
  @return json
  */
-- (NSDictionary *) formatResponseData:(id<SLAFResponseDataFormatter>) formatter
+- (id) formatResponseData
 {
     // 如果formatter不为空，则默认外部进行格式化处理
-    if (formatter && [formatter respondsToSelector:@selector(responseDataFormat)]) {
-        return [formatter responseDataFormat];
+    if (self.responseDataFormatter && [self.responseDataFormatter respondsToSelector:@selector(responseDataFormat)]) {
+        return [self.responseDataFormatter responseDataFormat];
     }
     if (self.managerResponse.responseObject == nil || [self.managerResponse.responseObject length] == 0) {
         return nil;
