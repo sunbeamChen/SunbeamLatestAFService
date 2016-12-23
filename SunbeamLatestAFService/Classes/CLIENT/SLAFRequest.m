@@ -10,13 +10,13 @@
 
 @interface SLAFRequest()
 
-- (instancetype) initSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSMutableDictionary *) headerParams urlParams:(NSMutableDictionary *) urlParams bodyParams:(NSMutableDictionary *) bodyParams uploadFiles:(NSDictionary *) uploadFiles;
+- (instancetype) initSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSDictionary *) headerParams urlParams:(NSDictionary *) urlParams bodyParams:(NSDictionary *) bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles;
 
 @end
 
 @implementation SLAFRequest
 
-- (instancetype)initSLAFRequest:(SLAF_REQUEST_METHOD)method request:(NSMutableURLRequest *)request urlString:(NSString *)urlString useSSLCertificates:(BOOL)useSSLCertificates headerParams:(NSMutableDictionary *)headerParams urlParams:(NSMutableDictionary *)urlParams bodyParams:(NSMutableDictionary *)bodyParams uploadFiles:(NSDictionary *) uploadFiles
+- (instancetype)initSLAFRequest:(SLAF_REQUEST_METHOD)method request:(NSMutableURLRequest *)request urlString:(NSString *)urlString useSSLCertificates:(BOOL)useSSLCertificates headerParams:(NSDictionary *)headerParams urlParams:(NSDictionary *)urlParams bodyParams:(NSDictionary *)bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles
 {
     if (self = [super init]) {
         self.method = method;
@@ -32,7 +32,7 @@
     return self;
 }
 
-+ (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSMutableDictionary *) headerParams urlParams:(NSMutableDictionary *) urlParams bodyParams:(NSMutableDictionary *) bodyParams uploadFiles:(NSDictionary *) uploadFiles
++ (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSDictionary *) headerParams urlParams:(NSDictionary *) urlParams bodyParams:(NSDictionary *) bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles
 {
     return [[SLAFRequest alloc] initSLAFRequest:method request:request urlString:urlString useSSLCertificates:useSSLCertificates headerParams:headerParams urlParams:urlParams bodyParams:bodyParams uploadFiles:uploadFiles];
 }

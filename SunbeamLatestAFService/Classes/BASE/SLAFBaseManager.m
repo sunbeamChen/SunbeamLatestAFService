@@ -147,7 +147,6 @@
         __strong __typeof__(weakSelf) strongSelf = weakSelf;
         if (response.error == nil) {
             // 成功
-            id jsonData = [strongSelf formatResponseData:strongSelf];
             completion(self.childManager.identifier, response.downloadFileUrl, nil);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];

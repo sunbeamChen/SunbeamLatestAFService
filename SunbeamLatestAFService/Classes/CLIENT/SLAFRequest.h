@@ -24,18 +24,18 @@
 @property (nonatomic, assign) BOOL useSSLCertificates;
 
 // header请求参数
-@property (nonatomic, strong) NSMutableDictionary* headerParams;
+@property (nonatomic, strong) NSDictionary* headerParams;
 
 // url请求参数
-@property (nonatomic, strong) NSMutableDictionary* urlParams;
+@property (nonatomic, strong) NSDictionary* urlParams;
 
 // body请求参数
-@property (nonatomic, strong) NSMutableDictionary* bodyParams;
+@property (nonatomic, strong) NSDictionary* bodyParams;
 
 // upload文件上传地址 {'fileKey':'localFilePath'}
-@property (nonatomic, strong) NSDictionary* uploadFiles;
+@property (nonatomic, strong) NSMutableDictionary* uploadFiles;
 
 // 获取请求实例对象
-+ (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSMutableDictionary *) headerParams urlParams:(NSMutableDictionary *) urlParams bodyParams:(NSMutableDictionary *) bodyParams uploadFiles:(NSDictionary *) uploadFiles;
++ (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSDictionary *) headerParams urlParams:(NSDictionary *) urlParams bodyParams:(NSDictionary *) bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles;
 
 @end
