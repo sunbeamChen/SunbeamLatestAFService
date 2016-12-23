@@ -38,6 +38,7 @@
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
+        NSLog(@"Sunbeam Latest AFService version is %@", SLAF_SERVICE_VERSION);
     });
     return sharedInstance;
 }
