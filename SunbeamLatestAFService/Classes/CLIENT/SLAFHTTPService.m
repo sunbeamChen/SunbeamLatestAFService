@@ -7,6 +7,7 @@
 //
 
 #import "SLAFHTTPService.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface SLAFHTTPService()
 

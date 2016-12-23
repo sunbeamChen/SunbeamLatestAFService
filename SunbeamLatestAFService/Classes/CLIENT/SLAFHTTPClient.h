@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "../BASE/SLAFServiceProperty.h"
 #import "SLAFResponse.h"
-#import "SLAFHTTPService.h"
 
 @interface SLAFHTTPClient : NSObject
 
