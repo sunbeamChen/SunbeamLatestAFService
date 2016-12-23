@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "SLAFServiceProperty.h"
-#import "../CLIENT/SLAFRequest.h"
-#import "../CLIENT/SLAFResponse.h"
+#import "SLAFRequest.h"
+#import "SLAFResponse.h"
 
 @class SLAFBaseManager;
 
@@ -80,7 +80,7 @@
 
 @end
 
-@interface SLAFBaseManager : NSObject
+@interface SLAFBaseManager : NSObject <SLAFManagerProtocol, SLAFRequestParams, SLAFRequestParamsValidator, SLAFRequestInterceptor, SLAFResponseDataFormatter, SLAFResponseDataValidator>
 
 @property (nonatomic, weak) NSObject<SLAFManagerProtocol>* childManager;
 

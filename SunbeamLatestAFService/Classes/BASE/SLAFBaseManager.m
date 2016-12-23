@@ -75,13 +75,13 @@
             if (response.error == nil) {
                 // 请求成功
                 id jsonData = [strongSelf formatResponseData:strongSelf];
-                completion(self.childManager.identifier, jsonData, nil);
+                completion(strongSelf.childManager.identifier, jsonData, nil);
                 if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                     [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
                 }
             } else {
                 // 请求失败
-                completion(self.childManager.identifier, nil, response.error);
+                completion(strongSelf.childManager.identifier, nil, response.error);
                 if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
                     [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
                 }
@@ -114,13 +114,13 @@
         if (response.error == nil) {
             // 成功
             id jsonData = [strongSelf formatResponseData:strongSelf];
-            completion(self.childManager.identifier, jsonData, nil);
+            completion(strongSelf.childManager.identifier, jsonData, nil);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
             }
         } else {
             // 失败
-            completion(self.childManager.identifier, nil, response.error);
+            completion(strongSelf.childManager.identifier, nil, response.error);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
             }
@@ -147,13 +147,13 @@
         __strong __typeof__(weakSelf) strongSelf = weakSelf;
         if (response.error == nil) {
             // 成功
-            completion(self.childManager.identifier, response.downloadFileUrl, nil);
+            completion(strongSelf.childManager.identifier, response.downloadFileUrl, nil);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
             }
         } else {
             // 失败
-            completion(self.childManager.identifier, nil, response.error);
+            completion(strongSelf.childManager.identifier, nil, response.error);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
             }
