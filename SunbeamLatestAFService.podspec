@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name             = 'SunbeamLatestAFService'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'SunbeamLatestAFService is an networking service base on latest AFNetworking.'
   s.description      = <<-DESC
-An networking service base on latest AFNetworking.
+An networking service base on latest AFNetworking 3.0, use block callback after request complete.
                        DESC
   s.homepage         = 'https://github.com/sunbeamChen/SunbeamLatestAFService'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
