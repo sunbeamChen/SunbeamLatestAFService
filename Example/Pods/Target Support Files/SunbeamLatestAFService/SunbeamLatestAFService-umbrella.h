@@ -4,6 +4,7 @@
 #import "SLAFBaseService.h"
 #import "SLAFServiceContext.h"
 #import "SLAFServiceFactory.h"
+#import "SLAFServiceProperty.h"
 #import "SLAFHTTPClient.h"
 #import "SLAFHTTPService.h"
 #import "SLAFRequest.h"

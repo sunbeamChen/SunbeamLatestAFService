@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - SunbeamLatestAFService (0.1.2):
+  - SunbeamLatestAFService (0.1.3):
     - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  SunbeamLatestAFService: 6f446969584c112b857c8f37068d7a8c6498e12a
+  SunbeamLatestAFService: 0a6de1f3885220c856a33f1653f5cd26ba9c856e
 
 PODFILE CHECKSUM: 99f118df2f5a77c7a999aa7f2cb33310b46fb9be
 
