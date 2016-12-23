@@ -1,6 +1,6 @@
 {
   "name": "SunbeamLatestAFService",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "summary": "SunbeamLatestAFService is an networking service base on latest AFNetworking.",
   "description": "An networking service base on latest AFNetworking.",
   "homepage": "https://github.com/sunbeamChen/SunbeamLatestAFService",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/sunbeamChen/SunbeamLatestAFService.git",
-    "tag": "0.1.6"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "7.0"

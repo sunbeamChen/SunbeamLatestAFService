@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../BASE/SLAFServiceProperty.h"
+#import "SLAFServiceProperty.h"
 #import "SLAFRequest.h"
 
 @interface SLAFRequestGenerator : NSObject

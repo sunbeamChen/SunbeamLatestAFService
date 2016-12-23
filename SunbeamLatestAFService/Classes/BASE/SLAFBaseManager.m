@@ -9,7 +9,7 @@
 #import "SLAFBaseManager.h"
 #import "SLAFServiceContext.h"
 #import "SLAFServiceProperty.h"
-#import "../CLIENT/SLAFHTTPClient.h"
+#import "SLAFHTTPClient.h"
 
 #define SAF_REQUEST_ID_DEFAULT 0
 

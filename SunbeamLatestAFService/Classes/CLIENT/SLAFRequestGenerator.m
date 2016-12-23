@@ -8,10 +8,10 @@
 
 #import "SLAFRequestGenerator.h"
 #import <AFNetworking/AFNetworking.h>
-#import "../BASE/SLAFServiceFactory.h"
-#import "../BASE/SLAFServiceProperty.h"
-#import "../BASE/SLAFServiceContext.h"
-#import "../TOOL/SLAFTool.h"
+#import "SLAFServiceFactory.h"
+#import "SLAFServiceProperty.h"
+#import "SLAFServiceContext.h"
+#import "SLAFTool.h"
 
 @implementation SLAFRequestGenerator
 

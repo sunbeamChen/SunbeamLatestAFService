@@ -7,7 +7,7 @@
 //
 
 #import "SLAFResponseConstructor.h"
-#import "../BASE/SLAFServiceProperty.h"
+#import "SLAFServiceProperty.h"
 
 @implementation SLAFResponseConstructor
 
