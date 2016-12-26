@@ -10,7 +10,7 @@
 #import "SLAFServiceProperty.h"
 #import "SLAFResponse.h"
 
-#define SLAF_SERVICE_VERSION @"0.1.14"
+#define SLAF_SERVICE_VERSION @"0.1.15"
 
 @interface SLAFHTTPClient : NSObject
 
