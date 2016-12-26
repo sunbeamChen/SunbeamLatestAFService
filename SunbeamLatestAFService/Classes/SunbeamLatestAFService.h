@@ -24,4 +24,10 @@ FOUNDATION_EXPORT const unsigned char SunbeamLatestAFServiceVersionString[];
 
 #import "SLAFRequest.h"
 
+#import "SLAFRequestGenerator.h"
+
 #import "SLAFResponse.h"
+
+#import "SLAFResponseConstructor.h"
+
+#import "SLAFTool.h"

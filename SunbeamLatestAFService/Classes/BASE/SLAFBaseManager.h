@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SLAFServiceProperty.h"
-#import "SLAFRequest.h"
-#import "SLAFResponse.h"
 
 @class SLAFBaseManager;
 
@@ -37,7 +35,7 @@
 
 @required
 // 请求参数
-- (NSDictionary *) requestParams;
+- (NSDictionary *) generatorRequestParams;
 
 @end
 
@@ -67,7 +65,7 @@
 
 @optional
 // 响应结果格式化(默认格式化为JSON格式)
-- (id) responseDataFormat;
+- (id) responseDataFormat:(id) responseObject;
 
 @end
 
@@ -93,10 +91,6 @@
 @property (nonatomic, weak) id<SLAFResponseDataFormatter> responseDataFormatter;
 
 @property (nonatomic, weak) id<SLAFResponseDataValidator> responseDataValidator;
-
-@property (nonatomic, strong) SLAFRequest* managerRequest;
-
-@property (nonatomic, strong) SLAFResponse* managerResponse;
 
 // 数据请求入口
 - (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id responseObject, NSError* error)) completion;

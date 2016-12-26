@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) AFURLSessionManager* httpSessionManager;
 
+@property (nonatomic, strong) AFURLSessionManager* jsonSessionManager;
+
 @end
 
 @implementation SLAFHTTPService
@@ -28,22 +30,28 @@
 - (NSURLSessionDataTask *)loadDataTask:(SLAFRequest *)slafRequest completion:(void (^)(NSURLResponse *, id, NSError *))completion
 {
     AFURLSessionManager* sessionManager = [self getHttpSessionManager:slafRequest.useSSLCertificates];
-    return [sessionManager dataTaskWithRequest:slafRequest.request completionHandler:completion];
+    NSURLSessionDataTask* dataTask = [sessionManager dataTaskWithRequest:slafRequest.request completionHandler:completion];
+    [dataTask resume];
+    return dataTask;
 }
 
 - (NSURLSessionUploadTask *)loadUploadTask:(SLAFRequest *)slafRequest uploadProgress:(void (^)(NSProgress *))uploadProgressBlock completion:(void (^)(NSURLResponse *, id, NSError *))completion
 {
     AFURLSessionManager* sessionManager = [self getHttpSessionManager:slafRequest.useSSLCertificates];
-    return [sessionManager uploadTaskWithStreamedRequest:slafRequest.request progress:uploadProgressBlock completionHandler:completion];
+    NSURLSessionUploadTask* uploadTask = [sessionManager uploadTaskWithStreamedRequest:slafRequest.request progress:uploadProgressBlock completionHandler:completion];
+    [uploadTask resume];
+    return uploadTask;
 }
 
 - (NSURLSessionDownloadTask *)loadDownloadTask:(SLAFRequest *)slafRequest downloadProgress:(void (^)(NSProgress *))downloadProgressBlock completion:(void (^)(NSURLResponse *, NSURL *, NSError *))completion
 {
     AFURLSessionManager* sessionManager = [self getHttpSessionManager:slafRequest.useSSLCertificates];
-    return [sessionManager downloadTaskWithRequest:slafRequest.request progress:downloadProgressBlock destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+    NSURLSessionDownloadTask* downloadTask = [sessionManager downloadTaskWithRequest:slafRequest.request progress:downloadProgressBlock destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
         return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
     } completionHandler:completion];
+    [downloadTask resume];
+    return downloadTask;
 }
 
 - (AFURLSessionManager *)getHttpSessionManager:(BOOL) useSSLCertificates
@@ -51,6 +59,7 @@
     if (_httpSessionManager == nil) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         _httpSessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+        _httpSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
         if (useSSLCertificates) {
             _httpSessionManager.securityPolicy = [self getCustomSecurityPolicy];
         } else {

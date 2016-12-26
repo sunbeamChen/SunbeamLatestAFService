@@ -32,8 +32,6 @@
         _requestInterceptor = nil;
         _responseDataFormatter = nil;
         _responseDataValidator = nil;
-        _managerRequest = nil;
-        _managerResponse = nil;
     }
     
     return self;
@@ -45,8 +43,6 @@
 - (void)dealloc
 {
     [[SLAFHTTPClient sharedSLAFHTTPClient] cancelAllRequest];
-    _managerRequest = nil;
-    _managerResponse = nil;
 }
 
 /**
@@ -65,7 +61,10 @@
         return SAF_REQUEST_ID_DEFAULT;
     }
     // 获取请求参数
-    NSDictionary* params = [self.requestParams requestParams];
+    NSDictionary* params = nil;
+    if (self.requestParams && [self.requestParams respondsToSelector:@selector(generatorRequestParams)]) {
+        params = [self.requestParams generatorRequestParams];
+    }
     // 发起请求
     __weak __typeof__(self) weakSelf = self;
     if (self.childManager.method == GET || self.childManager.method == POST) {
@@ -74,7 +73,8 @@
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
             if (response.error == nil) {
                 // 成功
-                id jsonData = [strongSelf formatResponseData];
+                id jsonData = [strongSelf formatResponseData:response.responseObject];
+                NSLog(@"\nhttps GET/POST请求响应格式化后数据：%@\n<<<end==========================================https GET/POST请求序号:%@", jsonData, response.requestId);
                 if (self.responseDataValidator && [self.responseDataValidator respondsToSelector:@selector(responseDataValidate:)]) {
                     NSError* error = [self.responseDataValidator responseDataValidate:jsonData];
                     if (error != nil) {
@@ -115,7 +115,10 @@
         return SAF_REQUEST_ID_DEFAULT;
     }
     // 获取请求参数
-    NSDictionary* params = [self.requestParams requestParams];
+    NSDictionary* params = nil;
+    if (self.requestParams && [self.requestParams respondsToSelector:@selector(generatorRequestParams)]) {
+        params = [self.requestParams generatorRequestParams];
+    }
     // 发起请求
     __weak __typeof__(self) weakSelf = self;
     // 上传
@@ -123,7 +126,7 @@
         __strong __typeof__(weakSelf) strongSelf = weakSelf;
         if (response.error == nil) {
             // 成功
-            id jsonData = [strongSelf formatResponseData];
+            id jsonData = [strongSelf formatResponseData:response.responseObject];
             if (self.responseDataValidator && [self.responseDataValidator respondsToSelector:@selector(responseDataValidate:)]) {
                 NSError* error = [self.responseDataValidator responseDataValidate:jsonData];
                 if (error != nil) {
@@ -160,7 +163,10 @@
         return SAF_REQUEST_ID_DEFAULT;
     }
     // 获取请求参数
-    NSDictionary* params = [self.requestParams requestParams];
+    NSDictionary* params = nil;
+    if (self.requestParams && [self.requestParams respondsToSelector:@selector(generatorRequestParams)]) {
+        params = [self.requestParams generatorRequestParams];
+    }
     // 发起请求
     __weak __typeof__(self) weakSelf = self;
     // 下载
@@ -215,19 +221,19 @@
  @param formatter 格式化方法
  @return json
  */
-- (id) formatResponseData
+- (id) formatResponseData:(id) responseObject
 {
     // 如果formatter不为空，则默认外部进行格式化处理
-    if (self.responseDataFormatter && [self.responseDataFormatter respondsToSelector:@selector(responseDataFormat)]) {
-        return [self.responseDataFormatter responseDataFormat];
+    if (self.responseDataFormatter && [self.responseDataFormatter respondsToSelector:@selector(responseDataFormat:)]) {
+        return [self.responseDataFormatter responseDataFormat:responseObject];
     }
-    if (self.managerResponse.responseObject == nil || [self.managerResponse.responseObject length] == 0) {
+    if (responseObject == nil || [responseObject length] == 0) {
         return nil;
     }
     NSError* error = nil;
-    NSDictionary* returnDictionary = [NSJSONSerialization JSONObjectWithData:self.managerResponse.responseObject options:NSJSONReadingAllowFragments error:&error];
+    id returnDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
     if (error) {
-        NSLog(@"网络请求数据NSJSONReadingAllowFragments格式化失败：%@", error);
+        NSLog(@"\n网络请求数据NSJSONReadingAllowFragments格式化失败：%@", error);
         return nil;
     }
     return returnDictionary;
