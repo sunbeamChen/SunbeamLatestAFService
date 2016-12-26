@@ -14,7 +14,7 @@
 /**
  GET/POST
 
- @param request 请求
+ @param slafRequest 请求
  @param completion 回调
  @return NSURLSessionTask
  */
@@ -23,7 +23,7 @@
 /**
  Upload
 
- @param request 请求
+ @param slafRequest 请求
  @param uploadProgressBlock 上传进程
  @param completion 回调
  @return NSURLSessionTask
@@ -33,7 +33,7 @@
 /**
  Download
 
- @param request 请求
+ @param slafRequest 请求
  @param downloadProgressBlock 下载进程
  @param completion 回调
  @return NSURLSessionTask

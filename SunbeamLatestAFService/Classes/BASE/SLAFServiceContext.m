@@ -106,7 +106,7 @@ typedef void(^NetworkStatusChangeBlock)(SLAF_NETWORK_STATUS networkStatus);
 /**
  设置SLAF service factory代理
  
- @param serviceFactoryDelegate SLAFServiceFactoryDelegate
+ @param SLAFServiceFactoryDelegate SLAFServiceFactoryDelegate
  */
 - (void) setSLAFServiceFactoryDelegate:(id<SLAFServiceFactoryProtocol>) SLAFServiceFactoryDelegate
 {

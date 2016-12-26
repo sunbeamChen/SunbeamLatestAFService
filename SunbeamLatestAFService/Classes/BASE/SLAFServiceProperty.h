@@ -43,7 +43,4 @@ typedef enum : NSUInteger {
 // 设置NSMutableURLRequest body中请求参数
 #define SLAFRequestBodyParamsKey @"slaf_request_body_dict"
 
-// 设置需要上传文件的本地地址
-#define SLAFRequestUploadFilesParamsKey @"slaf_request_upload_files_string"
-
 #endif /* SLAFServiceProperty_h */

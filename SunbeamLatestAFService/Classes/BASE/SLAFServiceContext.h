@@ -54,7 +54,7 @@ typedef enum : NSUInteger {
 /**
  设置SLAF service factory代理
 
- @param serviceFactoryDelegate SLAFServiceFactoryDelegate
+ @param SLAFServiceFactoryDelegate SLAFServiceFactoryDelegate
  */
 - (void) setSLAFServiceFactoryDelegate:(id<SLAFServiceFactoryProtocol>) SLAFServiceFactoryDelegate;
 
