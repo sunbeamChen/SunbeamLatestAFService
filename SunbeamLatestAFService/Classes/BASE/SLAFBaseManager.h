@@ -76,7 +76,7 @@
 
 @optional
 // 响应结果格式化后的数据进行合法性检查
-- (BOOL) responseDataValidate;
+- (NSError *) responseDataValidate:(id) formatData;
 
 @end
 

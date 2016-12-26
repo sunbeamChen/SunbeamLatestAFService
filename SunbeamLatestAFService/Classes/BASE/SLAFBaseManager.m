@@ -75,6 +75,17 @@
             if (response.error == nil) {
                 // 成功
                 id jsonData = [strongSelf formatResponseData];
+                if (self.responseDataValidator && [self.responseDataValidator respondsToSelector:@selector(responseDataValidate:)]) {
+                    NSError* error = [self.responseDataValidator responseDataValidate:jsonData];
+                    if (error != nil) {
+                        // response data验证失败
+                        completion(strongSelf.childManager.identifier, nil, error);
+                        if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
+                            [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+                        }
+                        return ;
+                    }
+                }
                 completion(strongSelf.childManager.identifier, jsonData, nil);
                 if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                     [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
@@ -113,6 +124,17 @@
         if (response.error == nil) {
             // 成功
             id jsonData = [strongSelf formatResponseData];
+            if (self.responseDataValidator && [self.responseDataValidator respondsToSelector:@selector(responseDataValidate:)]) {
+                NSError* error = [self.responseDataValidator responseDataValidate:jsonData];
+                if (error != nil) {
+                    // response data验证失败
+                    completion(strongSelf.childManager.identifier, nil, error);
+                    if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
+                        [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+                    }
+                    return ;
+                }
+            }
             completion(strongSelf.childManager.identifier, jsonData, nil);
             if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
                 [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
@@ -181,7 +203,10 @@
         return [NSError errorWithDomain:SLAF_ERROR_DOMAIN code:REQUEST_RUNING_ERROR userInfo:@{NSLocalizedDescriptionKey:@"network request is busy"}];
     }
     // 判断网络请求参数是否合法，错误会返回NSError（由外部判断后返回）
-    return [self.requestParamsValidator requestParamsValidate];
+    if (self.requestParamsValidator && [self.requestParamsValidator respondsToSelector:@selector(requestParamsValidator)]) {
+        return [self.requestParamsValidator requestParamsValidate];
+    }
+    return nil;
 }
 
 /**
