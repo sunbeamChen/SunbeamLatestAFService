@@ -27,7 +27,8 @@
 
 - (BOOL)useSSLCertificates
 {
-    return NO;
+    // 是否使用SSL Certificates进行验证，取值为YES时，APP MainBundle中必须存在 appSSLCertificate.cer 文件，取值为NO时，不需要有该文件
+    return YES;
 }
 
 @end

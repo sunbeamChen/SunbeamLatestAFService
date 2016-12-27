@@ -49,9 +49,14 @@
     NSNumber* requestId = [self generateRequestId];
     NSLog(@"\n==========================================begin>>>https GET/POST请求序号:%@\nhttps GET/POST请求url：%@\nhttps GET/POST请求header：%@\nhttps GET/POST请求body：%@", requestId, request.urlString, request.request.allHTTPHeaderFields, [[NSString alloc] initWithData:request.request.HTTPBody encoding:NSUTF8StringEncoding]);
     self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadDataTask:request completion:^(NSURLResponse *response, id responseObject, NSError *error) {
-        NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*) response;
-        NSLog(@"\n==========================================response>>>https GET/POST请求序号:%@\nhttps GET/POST请求响应status code：%l, error：%@", requestId, httpResponse.statusCode, error);
+        if (response) {
+            NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*) response;
+            NSLog(@"\n==========================================response>>>https GET/POST请求序号:%@\nhttps GET/POST请求响应status code：%@, error：%@", requestId, @(httpResponse.statusCode), error);
+        } else {
+            NSLog(@"\n==========================================response>>>https GET/POST请求序号:%@\nhttps GET/POST请求响应error：%@", requestId, error);
+        }
         //NSLog(@"\nhttps GET/POST请求响应原始数据：%@", responseObject);
+        
         NSURLSessionDataTask* dataTask = self.sessionTaskQueue[requestId];
         if (dataTask == nil) {
             // 请求已被取消

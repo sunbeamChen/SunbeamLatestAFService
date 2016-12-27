@@ -10,6 +10,7 @@
 		33B9D99C1E10F89E001F81BF /* CheckUsernameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B9D9971E10F89E001F81BF /* CheckUsernameManager.m */; };
 		33B9D99D1E10F89E001F81BF /* CheckUsernameService.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B9D9991E10F89E001F81BF /* CheckUsernameService.m */; };
 		33B9D99E1E10F89E001F81BF /* SLAFTestServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B9D99B1E10F89E001F81BF /* SLAFTestServiceFactory.m */; };
+		33B9D9A01E112A14001F81BF /* sherlockClient.cer in Resources */ = {isa = PBXBuildFile; fileRef = 33B9D99F1E112A14001F81BF /* sherlockClient.cer */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -50,6 +51,7 @@
 		33B9D9991E10F89E001F81BF /* CheckUsernameService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUsernameService.m; sourceTree = "<group>"; };
 		33B9D99A1E10F89E001F81BF /* SLAFTestServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAFTestServiceFactory.h; sourceTree = "<group>"; };
 		33B9D99B1E10F89E001F81BF /* SLAFTestServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAFTestServiceFactory.m; sourceTree = "<group>"; };
+		33B9D99F1E112A14001F81BF /* sherlockClient.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = sherlockClient.cer; sourceTree = "<group>"; };
 		4D4C3F80F1E52C48119636E1 /* SunbeamLatestAFService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SunbeamLatestAFService.podspec; path = ../SunbeamLatestAFService.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SunbeamLatestAFService_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunbeamLatestAFService_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,6 +154,7 @@
 		6003F593195388D20070C39A /* Example for SunbeamLatestAFService */ = {
 			isa = PBXGroup;
 			children = (
+				33B9D99F1E112A14001F81BF /* sherlockClient.cer */,
 				33B9D9961E10F89E001F81BF /* CheckUsernameManager.h */,
 				33B9D9971E10F89E001F81BF /* CheckUsernameManager.m */,
 				33B9D9981E10F89E001F81BF /* CheckUsernameService.h */,
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B9D9A01E112A14001F81BF /* sherlockClient.cer in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,

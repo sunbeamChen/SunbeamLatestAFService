@@ -81,7 +81,8 @@
 
 - (AFSecurityPolicy *) getCustomSecurityPolicy
 {
-    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    NSSet* pinnedCertificates = [AFSecurityPolicy certificatesInBundle:[NSBundle mainBundle]];
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate withPinnedCertificates:pinnedCertificates];
     [securityPolicy setAllowInvalidCertificates:NO];
     securityPolicy.validatesDomainName = YES;
     
