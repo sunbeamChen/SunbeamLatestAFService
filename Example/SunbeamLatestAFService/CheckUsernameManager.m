@@ -70,13 +70,13 @@
 }
 
 // 请求成功
-- (void) interceptorForRequestSuccess:(SLAFBaseManager *) manager
+- (void) interceptorForRequestSuccess
 {
     NSLog(@"请求成功");
 }
 
 // 请求失败
-- (void) interceptorForRequestFailed:(SLAFBaseManager *) manager
+- (void) interceptorForRequestFailed
 {
     NSLog(@"请求失败");
 }

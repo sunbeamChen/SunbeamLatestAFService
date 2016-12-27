@@ -22,13 +22,11 @@ typedef enum : NSUInteger {
 
 // 网络请求系统错误
 typedef enum : NSUInteger {
-    DEFAULT_ERROR               = -1,   // 默认发起请求
-    NETWORK_TIMEOUT_ERROR       = -2,   // 网络请求超时 "network request is timeout"
-    BAD_SERVER_RESPONSE_ERROR   = -3,   // 服务器响应有误 "server response is error"
-    NETWORK_NOT_REACHABLE_ERROR = -4,   // 网络不可达 "network is not reachable"
-    REQUEST_RUNING_ERROR        = -5,   // 当前正在进行网络请求 "network request is busy"
-    REQUEST_METHOD_NOT_SUPPORT  = -6,   // 当前请求方法不支持 "request method not support"
-    REQUEST_SUCCESS             = 0,    // 网络请求成功
+    NETWORK_TIMEOUT_ERROR       = -1,   // 网络请求超时 "network request is timeout"
+    BAD_SERVER_RESPONSE_ERROR   = -2,   // 服务器响应有误 "server response is error"
+    NETWORK_NOT_REACHABLE_ERROR = -3,   // 网络不可达 "network is not reachable"
+    REQUEST_RUNING_ERROR        = -4,   // 当前正在进行网络请求 "network request is busy"
+    REQUEST_METHOD_NOT_SUPPORT  = -5,   // 当前请求方法不支持 "request method not support"
 } SLAF_NETWORK_SYSTEM_ERROR;
 
 // 请求超时默认设置

@@ -80,21 +80,21 @@
                     if (error != nil) {
                         // response data验证失败
                         completion(strongSelf.childManager.identifier, nil, error);
-                        if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
-                            [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+                        if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed)]) {
+                            [strongSelf.requestInterceptor interceptorForRequestFailed];
                         }
                         return ;
                     }
                 }
                 completion(strongSelf.childManager.identifier, jsonData, nil);
-                if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
-                    [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
+                if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess)]) {
+                    [strongSelf.requestInterceptor interceptorForRequestSuccess];
                 }
             } else {
                 // 失败
                 completion(strongSelf.childManager.identifier, nil, response.error);
-                if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
-                    [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+                if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed)]) {
+                    [strongSelf.requestInterceptor interceptorForRequestFailed];
                 }
             }
         }];
@@ -132,21 +132,21 @@
                 if (error != nil) {
                     // response data验证失败
                     completion(strongSelf.childManager.identifier, nil, error);
-                    if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
-                        [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+                    if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed)]) {
+                        [strongSelf.requestInterceptor interceptorForRequestFailed];
                     }
                     return ;
                 }
             }
             completion(strongSelf.childManager.identifier, jsonData, nil);
-            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
-                [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
+            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess)]) {
+                [strongSelf.requestInterceptor interceptorForRequestSuccess];
             }
         } else {
             // 失败
             completion(strongSelf.childManager.identifier, nil, response.error);
-            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
-                [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed)]) {
+                [strongSelf.requestInterceptor interceptorForRequestFailed];
             }
         }
     }];
@@ -175,14 +175,14 @@
         if (response.error == nil) {
             // 成功
             completion(strongSelf.childManager.identifier, response.downloadFileUrl, nil);
-            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess:)]) {
-                [strongSelf.requestInterceptor interceptorForRequestSuccess:strongSelf];
+            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestSuccess)]) {
+                [strongSelf.requestInterceptor interceptorForRequestSuccess];
             }
         } else {
             // 失败
             completion(strongSelf.childManager.identifier, nil, response.error);
-            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed:)]) {
-                [strongSelf.requestInterceptor interceptorForRequestFailed:strongSelf];
+            if (strongSelf.requestInterceptor && [strongSelf.requestInterceptor respondsToSelector:@selector(interceptorForRequestFailed)]) {
+                [strongSelf.requestInterceptor interceptorForRequestFailed];
             }
         }
     }];

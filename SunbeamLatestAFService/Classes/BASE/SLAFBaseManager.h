@@ -51,12 +51,13 @@
 #pragma mark - 请求操作拦截器
 @protocol SLAFRequestInterceptor <NSObject>
 
+// 所有的请求拦截只有在收到服务器回调才会执行，参数合法性、网络等不会执行该拦截
 @optional
 // 请求成功
-- (void) interceptorForRequestSuccess:(SLAFBaseManager *) manager;
+- (void) interceptorForRequestSuccess;
 
 // 请求失败
-- (void) interceptorForRequestFailed:(SLAFBaseManager *) manager;
+- (void) interceptorForRequestFailed;
 
 @end
 
