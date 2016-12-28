@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "SLAFServiceProperty.h"
 
-@class SLAFBaseManager;
-
 #pragma mark - API唯一标识
 @protocol SLAFManagerProtocol <NSObject>
 
@@ -34,7 +32,7 @@
 @protocol SLAFRequestParams <NSObject>
 
 @required
-// 请求参数
+// 请求参数生成
 - (NSDictionary *) generatorRequestParams;
 
 @end
@@ -93,13 +91,31 @@
 
 @property (nonatomic, weak) id<SLAFResponseDataValidator> responseDataValidator;
 
-// 数据请求入口
+/**
+ 数据请求入口
+
+ @param completion 回调
+ @return 请求id
+ */
 - (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id responseObject, NSError* error)) completion;
 
-// 上传请求入口
-- (NSNumber *) loadUploadTask:(NSMutableDictionary *) uploadFiles uploadProgress:(void (^)(NSProgress *uploadProgress)) uploadProgress completion:(void(^)(NSString* identfier, id responseObject, NSError* error)) completion;
+/**
+ 上传请求入口
 
-// 下载请求入口
-- (NSNumber *) loadDownloadTask:(void (^)(NSProgress *uploadProgress)) downloadProgress completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion;
+ @param uploadFiles 上传文件字典
+ @param uploadProgressBlock 上传进度回调
+ @param completion 完成回调
+ @return 请求id
+ */
+- (NSNumber *) loadUploadTask:(NSMutableDictionary *) uploadFiles uploadProgressBlock:(void (^)(NSProgress *uploadProgress)) uploadProgressBlock completion:(void(^)(NSString* identfier, id responseObject, NSError* error)) completion;
+
+/**
+ 下载请求入口
+
+ @param downloadProgressBlock 下载进度回调
+ @param completion 完成回调
+ @return 请求id
+ */
+- (NSNumber *) loadDownloadTask:(void (^)(NSProgress *uploadProgress)) downloadProgressBlock completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion;
 
 @end

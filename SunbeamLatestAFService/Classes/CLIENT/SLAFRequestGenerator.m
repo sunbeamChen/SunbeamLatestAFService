@@ -17,19 +17,18 @@
 
 + (SLAFRequest *) generateSLAFRequest:(SLAF_REQUEST_METHOD) method identifier:(NSString *) identifier URI:(NSString *) URI requestParams:(NSDictionary *) requestParams uploadFiles:(NSMutableDictionary *) uploadFiles
 {
-    // 获取具体服务
     SLAFBaseService* service = [[SLAFServiceFactory sharedSLAFServiceFactory] getSLAFService:identifier];
-    // 获取请求参数
+    
     NSDictionary* headerParams = [requestParams objectForKey:SLAFRequestHeaderParamsKey];
     NSDictionary* urlParams = [requestParams objectForKey:SLAFRequestUrlParamsKey];
     NSDictionary* bodyParams = [requestParams objectForKey:SLAFRequestBodyParamsKey];
-    // 初始化url string
     NSString* urlString = nil;
     if (urlParams == nil) {
         urlString = [NSString stringWithFormat:@"%@%@%@%@", service.protocol, service.domain, service.version, URI];
     } else {
         urlString = [NSString stringWithFormat:@"%@%@%@%@?%@", service.protocol, service.domain, service.version, URI, [SLAFTool urlParamsString:urlParams]];
     }
+    
     NSMutableURLRequest* mutableRequest = nil;
     switch (method) {
         case GET:
@@ -60,21 +59,24 @@
         default:
             break;
     }
+    
     if (headerParams != nil && [headerParams count] > 0) {
         for (NSString* key in [headerParams allKeys]) {
             [mutableRequest addValue:[headerParams objectForKey:key] forHTTPHeaderField:key];
         }
     }
+    
     return [SLAFRequest getSLAFRequest:method request:mutableRequest urlString:urlString useSSLCertificates:service.useSSLCertificates headerParams:headerParams urlParams:urlParams bodyParams:bodyParams uploadFiles:uploadFiles];
 }
 
-#pragma mark - request serializer
+#pragma mark - get request serializer
 + (AFHTTPRequestSerializer *)getHttpJsonRequestSerializer
 {
     AFHTTPRequestSerializer* jsonRequestSerializer = [AFJSONRequestSerializer serializer];
     jsonRequestSerializer.timeoutInterval = [SLAFServiceContext sharedSLAFServiceContext].timeoutInterval = nil ? SLAFRequestTimeoutInterval : [SLAFServiceContext sharedSLAFServiceContext].timeoutInterval;
     jsonRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     [jsonRequestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
     return jsonRequestSerializer;
 }
 
@@ -83,6 +85,7 @@
     AFHTTPRequestSerializer* httpRequestSerializer = [AFHTTPRequestSerializer serializer];
     httpRequestSerializer.timeoutInterval = [SLAFServiceContext sharedSLAFServiceContext].timeoutInterval = nil ? SLAFRequestTimeoutInterval : [SLAFServiceContext sharedSLAFServiceContext].timeoutInterval;
     httpRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
+    
     return httpRequestSerializer;
 }
 

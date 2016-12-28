@@ -11,7 +11,6 @@
 
 @protocol SLAFServiceFactoryProtocol <NSObject>
 
-// 根据对应的service identifier获取对应的SLAFBaseService
 - (SLAFBaseService<SLAFServiceProtocol> *) getSLAFService:(NSString *) identifier;
 
 @end

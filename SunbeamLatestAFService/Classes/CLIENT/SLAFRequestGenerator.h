@@ -12,7 +12,16 @@
 
 @interface SLAFRequestGenerator : NSObject
 
-// 产生SLAFRequest实例
+/**
+ SLAFRequest构造
+
+ @param method 请求方法
+ @param identifier 当前请求服务标识
+ @param URI 请求资源定位符
+ @param requestParams 请求参数
+ @param uploadFiles 上传文件字典
+ @return SLAFRequest
+ */
 + (SLAFRequest *) generateSLAFRequest:(SLAF_REQUEST_METHOD) method identifier:(NSString *) identifier URI:(NSString *) URI requestParams:(NSDictionary *) requestParams uploadFiles:(NSMutableDictionary *) uploadFiles;
 
 @end

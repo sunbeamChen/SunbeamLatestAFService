@@ -15,6 +15,21 @@
     return [self paramsString:[self transformedUrlParamsArray:urlParamsDictionary]];
 }
 
++ (NSString *)paramsString:(NSArray *) urlParamsArray
+{
+    NSMutableString *paramString = [[NSMutableString alloc] init];
+    
+    [urlParamsArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([paramString length] == 0) {
+            [paramString appendFormat:@"%@", obj];
+        } else {
+            [paramString appendFormat:@"&%@", obj];
+        }
+    }];
+    
+    return paramString;
+}
+
 + (NSArray *)transformedUrlParamsArray:(NSDictionary *) urlParamsDictionary
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
@@ -27,21 +42,8 @@
             [result addObject:[NSString stringWithFormat:@"%@=%@", key, obj]];
         }
     }];
-    return result;
-}
-
-+ (NSString *)paramsString:(NSArray *) urlParamsArray
-{
-    NSMutableString *paramString = [[NSMutableString alloc] init];
     
-    [urlParamsArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([paramString length] == 0) {
-            [paramString appendFormat:@"%@", obj];
-        } else {
-            [paramString appendFormat:@"&%@", obj];
-        }
-    }];
-    return paramString;
+    return result;
 }
 
 @end

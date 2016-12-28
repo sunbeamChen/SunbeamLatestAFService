@@ -17,6 +17,7 @@
             self.child = (id<SLAFServiceProtocol>) self;
         }
     }
+    
     return self;
 }
 

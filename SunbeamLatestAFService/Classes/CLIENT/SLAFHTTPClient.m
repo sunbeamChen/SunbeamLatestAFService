@@ -13,25 +13,14 @@
 
 @interface SLAFHTTPClient()
 
-/**
- 请求id
- */
 @property (nonatomic, strong) NSNumber* requestId;
 
-/**
- session任务列表 {"requestId":NSURLSessionTask}
- */
 @property (nonatomic, strong) NSMutableDictionary* sessionTaskQueue;
 
 @end
 
 @implementation SLAFHTTPClient
 
-/**
- 单例实现
-
- @return SLAFHTTPClient
- */
 + (SLAFHTTPClient *) sharedSLAFHTTPClient
 {
     static SLAFHTTPClient *sharedInstance = nil;
@@ -40,12 +29,14 @@
         sharedInstance = [[self alloc] init];
         NSLog(@"\n==========================================\nSunbeam Latest AFService version is %@\n==========================================", SLAF_SERVICE_VERSION);
     });
+    
     return sharedInstance;
 }
 
 - (NSNumber *)loadDataTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params completion:(void (^)(SLAFResponse *))completion
 {
     SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:nil];
+    
     NSNumber* requestId = [self generateRequestId];
     NSLog(@"\n==========================================begin>>>https GET/POST请求序号:%@\nhttps GET/POST请求url：%@\nhttps GET/POST请求header：%@\nhttps GET/POST请求body：%@", requestId, request.urlString, request.request.allHTTPHeaderFields, [[NSString alloc] initWithData:request.request.HTTPBody encoding:NSUTF8StringEncoding]);
     self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadDataTask:request completion:^(NSURLResponse *response, id responseObject, NSError *error) {
@@ -59,53 +50,52 @@
         
         NSURLSessionDataTask* dataTask = self.sessionTaskQueue[requestId];
         if (dataTask == nil) {
-            // 请求已被取消
             return ;
         } else {
             [self.sessionTaskQueue removeObjectForKey:requestId];
         }
-        // 根据返回结果构造SLAFResponse
         SLAFResponse* slafResponse = [SLAFResponseConstructor constructSLAFResponse:requestId urlResponse:response responseObject:responseObject error:error downloadFileUrl:nil];
         completion(slafResponse);
     }];
+    
     return requestId;
 }
 
-- (NSNumber *)loadUploadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params uploadFiles:(NSMutableDictionary *) uploadFiles uploadProgress:(void (^)(NSProgress *))uploadProgressBlock completion:(void (^)(SLAFResponse *))completion
+- (NSNumber *)loadUploadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params uploadFiles:(NSMutableDictionary *) uploadFiles uploadProgressBlock:(void (^)(NSProgress *))uploadProgressBlock completion:(void (^)(SLAFResponse *))completion
 {
     SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:uploadFiles];
+    
     NSNumber* requestId = [self generateRequestId];
-    self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadUploadTask:request uploadProgress:uploadProgressBlock completion:^(NSURLResponse *response, id responseObject, NSError *error) {
+    self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadUploadTask:request uploadProgressBlock:uploadProgressBlock completion:^(NSURLResponse *response, id responseObject, NSError *error) {
         NSURLSessionDataTask* dataTask = self.sessionTaskQueue[requestId];
         if (dataTask == nil) {
-            // 请求已被取消
             return ;
         } else {
             [self.sessionTaskQueue removeObjectForKey:requestId];
         }
-        // 根据返回结果构造SLAFResponse
         SLAFResponse* slafResponse = [SLAFResponseConstructor constructSLAFResponse:requestId urlResponse:response responseObject:responseObject error:error downloadFileUrl:nil];
         completion(slafResponse);
     }];
+    
     return requestId;
 }
 
-- (NSNumber *)loadDownloadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params downloadProgress:(void (^)(NSProgress *))downloadProgressBlock completion:(void (^)(SLAFResponse *))completion
+- (NSNumber *)loadDownloadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params downloadProgressBlock:(void (^)(NSProgress *))downloadProgressBlock completion:(void (^)(SLAFResponse *))completion
 {
     SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:nil];
+    
     NSNumber* requestId = [self generateRequestId];
-    self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadDownloadTask:request downloadProgress:downloadProgressBlock completion:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+    self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadDownloadTask:request downloadProgressBlock:downloadProgressBlock completion:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSURLSessionDataTask* dataTask = self.sessionTaskQueue[requestId];
         if (dataTask == nil) {
-            // 请求已被取消
             return ;
         } else {
             [self.sessionTaskQueue removeObjectForKey:requestId];
         }
-        // 根据返回结果构造SLAFResponse
         SLAFResponse* slafResponse = [SLAFResponseConstructor constructSLAFResponse:requestId urlResponse:response responseObject:nil error:error downloadFileUrl:filePath];
         completion(slafResponse);
     }];
+    
     return requestId;
 }
 

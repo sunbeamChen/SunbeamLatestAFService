@@ -22,6 +22,7 @@
     if (error) {
         NSInteger code = NETWORK_NOT_REACHABLE_ERROR;
         NSString* message = @"network is not reachable";
+        
         //待改进，目前处理是：除了超时、服务器响应异常以外，所有错误都当成是无网络
         if (error.code == NSURLErrorTimedOut) {
             code = NETWORK_TIMEOUT_ERROR;
@@ -30,6 +31,7 @@
             code = BAD_SERVER_RESPONSE_ERROR;
             message = @"server response is error";
         }
+        
         return [NSError errorWithDomain:SLAF_ERROR_DOMAIN code:code userInfo:@{NSLocalizedDescriptionKey:message}];
     }
     

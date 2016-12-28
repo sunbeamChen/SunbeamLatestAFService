@@ -10,13 +10,28 @@
 
 @interface SLAFTool : NSObject
 
-// url params dictionary 转换成url
+/**
+ url 参数
+
+ @param urlParamsDictionary url字典
+ @return url(使用&符号连接的参数)
+ */
 + (NSString *) urlParamsString:(NSDictionary *) urlParamsDictionary;
 
-// 转义参数
-+ (NSArray *) transformedUrlParamsArray:(NSDictionary *) urlParamsDictionary;
-
-// 字母排序之后形成的参数字符串
+/**
+ url参数
+ 
+ @param urlParamsArray 参数数组
+ @return url(使用&符号连接参数的url)
+ */
 + (NSString *) paramsString:(NSArray *) urlParamsArray;
+
+/**
+ 参数构造
+
+ @param urlParamsDictionary url字典
+ @return url数组(使用=符号连接的参数数组)
+ */
++ (NSArray *) transformedUrlParamsArray:(NSDictionary *) urlParamsDictionary;
 
 @end

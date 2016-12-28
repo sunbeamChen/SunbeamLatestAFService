@@ -24,20 +24,20 @@
  Upload
 
  @param slafRequest 请求
- @param uploadProgressBlock 上传进程
+ @param uploadProgressBlock 上传进程回调
  @param completion 回调
  @return NSURLSessionTask
  */
-- (id) loadUploadTask:(SLAFRequest *) slafRequest uploadProgress:(void (^)(NSProgress *uploadProgress)) uploadProgressBlock completion:(void (^)(NSURLResponse* response, id responseObject,  NSError* error)) completion;
+- (id) loadUploadTask:(SLAFRequest *) slafRequest uploadProgressBlock:(void (^)(NSProgress *uploadProgress)) uploadProgressBlock completion:(void (^)(NSURLResponse* response, id responseObject,  NSError* error)) completion;
 
 /**
  Download
 
  @param slafRequest 请求
- @param downloadProgressBlock 下载进程
+ @param downloadProgressBlock 下载进程回调
  @param completion 回调
  @return NSURLSessionTask
  */
-- (id) loadDownloadTask:(SLAFRequest *) slafRequest downloadProgress:(void (^)(NSProgress *downloadProgress))downloadProgressBlock completion:(void (^)(NSURLResponse* response, NSURL* filePath, NSError* error)) completion;
+- (id) loadDownloadTask:(SLAFRequest *) slafRequest downloadProgressBlock:(void (^)(NSProgress *downloadProgress))downloadProgressBlock completion:(void (^)(NSURLResponse* response, NSURL* filePath, NSError* error)) completion;
 
 @end

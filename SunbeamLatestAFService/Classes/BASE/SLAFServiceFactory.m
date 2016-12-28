@@ -16,11 +16,6 @@
 
 @implementation SLAFServiceFactory
 
-/**
- 单例实现
-
- @return SLAFServiceFactory
- */
 + (SLAFServiceFactory *) sharedSLAFServiceFactory
 {
     static SLAFServiceFactory *sharedInstance = nil;
@@ -31,12 +26,6 @@
     return sharedInstance;
 }
 
-/**
- 根据对应的service identifier获取对应的SLAFService
- 
- @param identifier 请求唯一标识
- @return SLAFBaseService<SLAFServiceProtocol>
- */
 - (SLAFBaseService<SLAFServiceProtocol> *) getSLAFService:(NSString *) identifier
 {
     if (self.SLAFServiceStorage[identifier] == nil) {

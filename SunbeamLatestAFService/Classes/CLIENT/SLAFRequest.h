@@ -11,31 +11,35 @@
 
 @interface SLAFRequest : NSObject
 
-// 请求类型
 @property (nonatomic, assign) SLAF_REQUEST_METHOD method;
 
-// 请求实例
 @property (nonatomic, strong) NSMutableURLRequest* request;
 
-// 请求url
 @property (nonatomic, copy) NSString* urlString;
 
-// security ssl cer file path
 @property (nonatomic, assign) BOOL useSSLCertificates;
 
-// header请求参数
 @property (nonatomic, strong) NSDictionary* headerParams;
 
-// url请求参数
 @property (nonatomic, strong) NSDictionary* urlParams;
 
-// body请求参数
 @property (nonatomic, strong) NSDictionary* bodyParams;
 
-// upload文件上传地址 {'fileKey':'localFilePath'}
 @property (nonatomic, strong) NSMutableDictionary* uploadFiles;
 
-// 获取请求实例对象
+/**
+ 构造SLAFRequest对象
+
+ @param method 请求方法
+ @param request 请求实例
+ @param urlString 请求url
+ @param useSSLCertificates 是否使用安全策略
+ @param headerParams 请求参数header
+ @param urlParams 请求参数url
+ @param bodyParams 请求参数body
+ @param uploadFiles 上传文件字典{'fileKey':'localFilePath'}
+ @return SLAFRequest
+ */
 + (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSDictionary *) headerParams urlParams:(NSDictionary *) urlParams bodyParams:(NSDictionary *) bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles;
 
 @end
