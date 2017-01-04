@@ -10,7 +10,7 @@
 #import "SLAFServiceProperty.h"
 #import "SLAFResponse.h"
 
-#define SLAF_SERVICE_VERSION @"0.1.18"
+#define SLAF_SERVICE_VERSION @"0.1.19"
 
 @interface SLAFHTTPClient : NSObject
 
@@ -58,11 +58,12 @@
  @param identifier 标识
  @param method 方法
  @param params 参数
+ @param downloadUrl 下载地址
  @param downloadProgressBlock 下载进程
  @param completion 回调
  @return 请求id
  */
-- (NSNumber *) loadDownloadTask:(NSString *) URI identifier:(NSString *) identifier method:(SLAF_REQUEST_METHOD) method params:(NSDictionary *) params downloadProgressBlock:(void (^)(NSProgress *downloadProgress))downloadProgressBlock completion:(void (^)(SLAFResponse* response)) completion;
+- (NSNumber *) loadDownloadTask:(NSString *) URI identifier:(NSString *) identifier method:(SLAF_REQUEST_METHOD) method params:(NSDictionary *) params downloadUrl:(NSString *) downloadUrl downloadProgressBlock:(void (^)(NSProgress *downloadProgress))downloadProgressBlock completion:(void (^)(SLAFResponse* response)) completion;
 
 /**
  取消所有网络请求

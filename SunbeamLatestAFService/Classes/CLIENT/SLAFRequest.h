@@ -27,6 +27,8 @@
 
 @property (nonatomic, strong) NSMutableDictionary* uploadFiles;
 
+@property (nonatomic, copy) NSString* downloadUrl;
+
 /**
  构造SLAFRequest对象
 
@@ -38,8 +40,9 @@
  @param urlParams 请求参数url
  @param bodyParams 请求参数body
  @param uploadFiles 上传文件字典{'fileKey':'localFilePath'}
+ @param downloadUrl 下载文件的地址
  @return SLAFRequest
  */
-+ (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSDictionary *) headerParams urlParams:(NSDictionary *) urlParams bodyParams:(NSDictionary *) bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles;
++ (SLAFRequest *) getSLAFRequest:(SLAF_REQUEST_METHOD) method request:(NSMutableURLRequest *) request urlString:(NSString *) urlString useSSLCertificates:(BOOL) useSSLCertificates headerParams:(NSDictionary *) headerParams urlParams:(NSDictionary *) urlParams bodyParams:(NSDictionary *) bodyParams uploadFiles:(NSMutableDictionary *) uploadFiles downloadUrl:(NSString *) downloadUrl;
 
 @end

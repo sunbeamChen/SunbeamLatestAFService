@@ -35,7 +35,7 @@
 
 - (NSNumber *)loadDataTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params completion:(void (^)(SLAFResponse *))completion
 {
-    SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:nil];
+    SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:nil downloadUrl:nil];
     
     NSNumber* requestId = [self generateRequestId];
     NSLog(@"\n==========================================begin>>>https GET/POST请求序号:%@\nhttps GET/POST请求url：%@\nhttps GET/POST请求header：%@\nhttps GET/POST请求body：%@", requestId, request.urlString, request.request.allHTTPHeaderFields, [[NSString alloc] initWithData:request.request.HTTPBody encoding:NSUTF8StringEncoding]);
@@ -63,7 +63,7 @@
 
 - (NSNumber *)loadUploadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params uploadFiles:(NSMutableDictionary *) uploadFiles uploadProgressBlock:(void (^)(NSProgress *))uploadProgressBlock completion:(void (^)(SLAFResponse *))completion
 {
-    SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:uploadFiles];
+    SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:uploadFiles downloadUrl:nil];
     
     NSNumber* requestId = [self generateRequestId];
     self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadUploadTask:request uploadProgressBlock:uploadProgressBlock completion:^(NSURLResponse *response, id responseObject, NSError *error) {
@@ -80,9 +80,9 @@
     return requestId;
 }
 
-- (NSNumber *)loadDownloadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params downloadProgressBlock:(void (^)(NSProgress *))downloadProgressBlock completion:(void (^)(SLAFResponse *))completion
+- (NSNumber *)loadDownloadTask:(NSString *)URI identifier:(NSString *)identifier method:(SLAF_REQUEST_METHOD)method params:(NSDictionary *)params downloadUrl:(NSString *) downloadUrl downloadProgressBlock:(void (^)(NSProgress *))downloadProgressBlock completion:(void (^)(SLAFResponse *))completion
 {
-    SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:nil];
+    SLAFRequest* request = [SLAFRequestGenerator generateSLAFRequest:method identifier:identifier URI:URI requestParams:params uploadFiles:nil downloadUrl:downloadUrl];
     
     NSNumber* requestId = [self generateRequestId];
     self.sessionTaskQueue[requestId] = [[[SLAFHTTPService alloc] init] loadDownloadTask:request downloadProgressBlock:downloadProgressBlock completion:^(NSURLResponse *response, NSURL *filePath, NSError *error) {

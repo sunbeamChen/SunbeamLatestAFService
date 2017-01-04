@@ -142,7 +142,7 @@
     }
 }
 
-- (NSNumber *) loadDownloadTask:(void (^)(NSProgress *uploadProgress)) downloadProgressBlock completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion
+- (NSNumber *) loadDownloadTask:(NSString *) downloadUrl downloadProgressBlock:(void (^)(NSProgress *uploadProgress)) downloadProgressBlock completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion
 {
     NSError* error = [self beforeRequest];
     if (error != nil) {
@@ -158,7 +158,7 @@
     
     __weak __typeof__(self) weakSelf = self;
     if (self.childManager.method == DOWNLOAD) {
-        return [[SLAFHTTPClient sharedSLAFHTTPClient] loadDownloadTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params downloadProgressBlock:downloadProgressBlock completion:^(SLAFResponse *response) {
+        return [[SLAFHTTPClient sharedSLAFHTTPClient] loadDownloadTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params downloadUrl:downloadUrl downloadProgressBlock:downloadProgressBlock completion:^(SLAFResponse *response) {
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
             if (response.error == nil) {
                 completion(strongSelf.childManager.identifier, response.downloadFileUrl, nil);

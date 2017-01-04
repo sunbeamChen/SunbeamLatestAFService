@@ -22,6 +22,6 @@
  @param uploadFiles 上传文件字典
  @return SLAFRequest
  */
-+ (SLAFRequest *) generateSLAFRequest:(SLAF_REQUEST_METHOD) method identifier:(NSString *) identifier URI:(NSString *) URI requestParams:(NSDictionary *) requestParams uploadFiles:(NSMutableDictionary *) uploadFiles;
++ (SLAFRequest *) generateSLAFRequest:(SLAF_REQUEST_METHOD) method identifier:(NSString *) identifier URI:(NSString *) URI requestParams:(NSDictionary *) requestParams uploadFiles:(NSMutableDictionary *) uploadFiles downloadUrl:(NSString *) downloadUrl;
 
 @end

@@ -15,7 +15,7 @@
 
 @implementation SLAFRequestGenerator
 
-+ (SLAFRequest *) generateSLAFRequest:(SLAF_REQUEST_METHOD) method identifier:(NSString *) identifier URI:(NSString *) URI requestParams:(NSDictionary *) requestParams uploadFiles:(NSMutableDictionary *) uploadFiles
++ (SLAFRequest *) generateSLAFRequest:(SLAF_REQUEST_METHOD) method identifier:(NSString *) identifier URI:(NSString *) URI requestParams:(NSDictionary *) requestParams uploadFiles:(NSMutableDictionary *) uploadFiles downloadUrl:(NSString *) downloadUrl
 {
     SLAFBaseService* service = [[SLAFServiceFactory sharedSLAFServiceFactory] getSLAFService:identifier];
     
@@ -43,7 +43,7 @@
         }
         case DOWNLOAD:
         {
-            mutableRequest = [[self getHttpRequestSerializer] requestWithMethod:@"GET" URLString:urlString parameters:nil error:nil];
+            mutableRequest = [[self getHttpRequestSerializer] requestWithMethod:@"GET" URLString:downloadUrl parameters:nil error:nil];
             break;
         }
         case UPLOAD:
@@ -66,7 +66,7 @@
         }
     }
     
-    return [SLAFRequest getSLAFRequest:method request:mutableRequest urlString:urlString useSSLCertificates:service.useSSLCertificates headerParams:headerParams urlParams:urlParams bodyParams:bodyParams uploadFiles:uploadFiles];
+    return [SLAFRequest getSLAFRequest:method request:mutableRequest urlString:urlString useSSLCertificates:service.useSSLCertificates headerParams:headerParams urlParams:urlParams bodyParams:bodyParams uploadFiles:uploadFiles downloadUrl:downloadUrl];
 }
 
 #pragma mark - get request serializer

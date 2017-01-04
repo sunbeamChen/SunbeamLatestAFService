@@ -112,10 +112,11 @@
 /**
  下载请求入口
 
+ @param downloadUrl 下载地址
  @param downloadProgressBlock 下载进度回调
  @param completion 完成回调
  @return 请求id
  */
-- (NSNumber *) loadDownloadTask:(void (^)(NSProgress *uploadProgress)) downloadProgressBlock completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion;
+- (NSNumber *) loadDownloadTask:(NSString *) downloadUrl downloadProgressBlock:(void (^)(NSProgress *uploadProgress)) downloadProgressBlock completion:(void(^)(NSString* identfier, NSURL* downloadFileurl, NSError* error)) completion;
 
 @end

@@ -1,6 +1,0 @@
-framework module SunbeamLatestAFService {
-  umbrella header "SunbeamLatestAFService.h"
-
-  export *
-  module * { export * }
-}
