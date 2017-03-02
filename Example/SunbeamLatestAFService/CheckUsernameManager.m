@@ -60,7 +60,7 @@
 // 请求参数
 - (NSDictionary *) generatorRequestParams
 {
-    return @{@"slaf_request_header_params_dict":@{@"APIVER":@"1.0"},@"slaf_request_body_dict":@{@"mobile":self.username}};
+    return @{SLAFRequestHeaderParamsKey:@{@"APIVER":@"1.0"},SLAFRequestBodyParamsKey:@{@"mobile":self.username}};
 }
 
 // 请求参数合法性检查

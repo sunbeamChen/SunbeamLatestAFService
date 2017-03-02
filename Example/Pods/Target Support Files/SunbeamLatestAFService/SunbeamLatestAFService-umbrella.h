@@ -7,6 +7,7 @@
 #import "SLAFServiceProperty.h"
 #import "SLAFHTTPClient.h"
 #import "SLAFHTTPService.h"
+#import "SLAFHTTPSessionManager.h"
 #import "SLAFRequest.h"
 #import "SLAFRequestGenerator.h"
 #import "SLAFResponse.h"

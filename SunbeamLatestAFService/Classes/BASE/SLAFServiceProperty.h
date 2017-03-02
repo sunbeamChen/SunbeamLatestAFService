@@ -27,6 +27,7 @@ typedef enum : NSUInteger {
     NETWORK_NOT_REACHABLE_ERROR = -3,   // 网络不可达 "network is not reachable"
     REQUEST_RUNING_ERROR        = -4,   // 当前正在进行网络请求 "network request is busy"
     REQUEST_METHOD_NOT_SUPPORT  = -5,   // 当前请求方法不支持 "request method not support"
+    REQUEST_IS_CANCELED = -6,           // 当前请求被取消 "request is canceled"
 } SLAF_NETWORK_SYSTEM_ERROR;
 
 // 请求超时默认设置

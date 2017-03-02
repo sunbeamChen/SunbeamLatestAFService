@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SunbeamLatestAFService'
-  s.version          = '0.1.19'
+  s.version          = '0.1.20'
   s.summary          = 'SunbeamLatestAFService is an networking service base on latest AFNetworking.'
   s.description      = <<-DESC
 An networking service base on latest AFNetworking 3.0, use block callback after request complete.

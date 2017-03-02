@@ -17,6 +17,13 @@ typedef enum : NSUInteger {
     REACHABLE_VIA_WIFI  = 2,    // wifi
 } SLAF_NETWORK_STATUS;
 
+// 网络请求策略
+typedef enum : NSUInteger {
+    RUNNING_ALL,  // 同时执行所有请求，默认规则
+    RUNNING_FIRST_IN,  // 一次只执行一个请求，先请求的执行，后请求的取消，即阻止新的请求，执行旧的请求
+    RUNNING_LAST_IN,  // 一次只执行一个请求，后请求的执行，原先未完成的请求取消，即取消旧的请求，执行新的请求
+} SLAF_REQUEST_RUNNING_STRATEGY;
+
 // 网络状态发生变化时发送notification
 #define SLAF_NETWORK_STATUS_CHANGED_NOTIFICATION_NAME @"slaf_network_status_changed_notification"
 
@@ -30,9 +37,14 @@ typedef enum : NSUInteger {
 + (SLAFServiceContext *) sharedSLAFServiceContext;
 
 /**
- 网络请求超时时间设置
+ 网络请求超时时间设置，未设置默认为 10.0
  */
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
+
+/**
+ 网络请求策略，未设置默认为 RUNNING_ALL
+ */
+@property (nonatomic, assign) SLAF_REQUEST_RUNNING_STRATEGY requestRunningStrategy;
 
 /**
  网络是否可达

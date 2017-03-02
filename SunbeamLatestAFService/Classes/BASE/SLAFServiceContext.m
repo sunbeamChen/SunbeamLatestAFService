@@ -39,6 +39,10 @@ typedef void(^NetworkStatusChangeBlock)(SLAF_NETWORK_STATUS networkStatus);
 {
     if (self = [super init]) {
         self.networkStatus = UNKNOWN;
+        // 设置网络请求默认超时时间
+        self.timeoutInterval = 10.0;
+        // 设置网络请求默认策略
+        self.requestRunningStrategy = RUNNING_ALL;
         // 开启网络监听
         [[AFNetworkReachabilityManager sharedManager] startMonitoring];
         __weak __typeof__(self) weakSelf = self;

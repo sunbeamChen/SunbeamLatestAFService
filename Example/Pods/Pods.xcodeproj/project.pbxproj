@@ -10,13 +10,6 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>02C57764F677AB310AFCBA7E4A1743DF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E233722B40DAC9C75FD5B6CE70461034</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>038DE6D856DFAE2F85304D036588D065</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -38,20 +31,6 @@
 			<string>5461D992F0D803F0F05DF72B2849301D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>047F5A96A8868C2141460F5119F86E27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52A955A3C657841DD4E6F40BD9A924F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>05A04ACD6116DE473278D17701B827F3</key>
 		<dict>
@@ -135,6 +114,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>08F1C3AD04B00153DFDD26E397177E69</key>
+		<dict>
+			<key>fileRef</key>
+			<string>63904B9DB052383CDA9F8522B5C808AB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0916754B750DF1517D9BF805872F8B8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CBCC2D7E69DFAD896E3615E0F8A7EC63</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>09260CC8CCF53449D0CA498B5F0A0BBF</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -163,6 +163,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>0A6C5E7AB028786FA6ADCBA2FA2880B7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFResponse.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>0AA1B9153633729F35C67949C7006B7A</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -177,6 +190,20 @@
 			<string>UIKit+AFNetworking/UIImage+AFNetworking.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0D211427D427ED7275D8E67EFA9C0F88</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2E71B442C784FBB9B53F98D59DA84CC1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0E98DADFAF23E12C4E905226F9F44C34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8A4D17EB9F7E37089C084C42B6F2B493</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>103EE194B42BE62229AA5C5351E9BFE9</key>
 		<dict>
@@ -193,19 +220,60 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1208DD2C65078B8B987314DA0DAA434B</key>
+		<key>10FA796FC300A9E2F00CFEB280BBADCC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1ED41602544636DDB6140676C98F1D5F</string>
+			<string>8FCD056D2A45ADF4C1DA9E4F014408CE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>13C354C1527B5120DCBD4B237899D8C2</key>
+		<key>110DE4AF345038248BCDD77CD9CE87B2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FF1EE6EBFDD7342B2383B57273CA6F5D</string>
+			<string>D74D6DE4B47A47850F886A7EAAA0DBD3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1187175FA888128293ED2E7C1F88E789</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFBaseManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>124E108EAE6500CFC9C020265575D96D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D6DCFC2EC6E40FE0B31E5131F4B88A7C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>13C735785923A455D1AF3F7E9C53A114</key>
 		<dict>
@@ -240,6 +308,19 @@
 			<string>AFURLRequestSerialization.m</string>
 			<key>path</key>
 			<string>AFNetworking/AFURLRequestSerialization.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>16DB228E09FC43E6B5DF9C043AD29D05</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFBaseManager.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -350,19 +431,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>1ED41602544636DDB6140676C98F1D5F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFHTTPService.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>1F17F426378DF5EC8DFB10304B8C4BA4</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -412,16 +480,16 @@
 				</array>
 			</dict>
 		</dict>
-		<key>231D44CBF0117FF2E48CA965F105D180</key>
+		<key>239B438FAFDF84DC4E4B8F087DA44B26</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>SLAFTool.m</string>
+			<string>SLAFHTTPService.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -453,7 +521,7 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>D35AFFD39FEB1800157330A7B0D7ACF6</string>
+				<string>29A1BDFDA5606507BD0BBCF171FA2D71</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -463,6 +531,20 @@
 			<string>SunbeamLatestAFService</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28CA848249E834200250E1384A3892DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AC16B6B595B9E0EDCE830C5F7D0BE2FB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>2952B3C6909CF79419E899529474B8A5</key>
 		<dict>
@@ -524,6 +606,24 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>29A1BDFDA5606507BD0BBCF171FA2D71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E00FEDF5D90FF617FE6422B60FBB1695</string>
+				<string>C400E93C144689331094B022F09F2364</string>
+				<string>EBB6BE3BAB390B94D4E895D4C45346CA</string>
+				<string>D97D5537EE8249FEAF3606CB7F20F32B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -551,25 +651,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2E8A32ED46194EDBE22146271F6D26DE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E287540F6AAFBD6834BFA37866AE26DA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2E9503C7095DED279D222C99163C2ACF</key>
+		<key>2E71B442C784FBB9B53F98D59DA84CC1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>SLAFServiceContext.h</string>
+			<string>SLAFHTTPClient.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2E8A32ED46194EDBE22146271F6D26DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E287540F6AAFBD6834BFA37866AE26DA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>2F36F6316F0C015B8FC2447C8D076E0F</key>
 		<dict>
@@ -583,6 +683,45 @@
 			<string>Pods-SunbeamLatestAFService_Tests-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305185F7F2E6B226A8DFC8721A2DDFC7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E00FEDF5D90FF617FE6422B60FBB1695</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>305DE1E256E3C69E7C57A874E841AF57</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4D0980DDEFB759CA19F6883F089627B3</string>
+				<string>8FE7553AB5407FA41948855C017A86C4</string>
+				<string>0D211427D427ED7275D8E67EFA9C0F88</string>
+				<string>6C9E22DEE60970526D82D741DF54F12C</string>
+				<string>C4290D575A92755BF0FC0244C67804D7</string>
+				<string>0E98DADFAF23E12C4E905226F9F44C34</string>
+				<string>BA5C5DDC85BB7BE0554252DF8F7760A7</string>
+				<string>3B1A6084CDA2F3F4E34F25C57F28355C</string>
+				<string>CB2FD2655C69952513EFE4295C81F38D</string>
+				<string>633F02B93A878BE7BDF8E358617916B2</string>
+				<string>08F1C3AD04B00153DFDD26E397177E69</string>
+				<string>DD5FB0CE19C8C774CEF631E0FF7C1362</string>
+				<string>E9CBC569B5DA59A1370672C2141F1C01</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>31421BED59C8FE2DFEFD4457219B946A</key>
 		<dict>
@@ -599,34 +738,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3465B6164F5F9AF7DE710CE48E07B5CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9B61A978552189FAD6C99FFA8B926E42</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>348617ACAB54D73C67A1FA16D033213B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E25D096C60B9FD405C652990A5CBBB7A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>3494FC4B2EA6D8DD63284EC2281A8F9F</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -640,25 +751,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>355CC812DBFBB6E11864EA33B766716B</key>
+		<key>354C9F743F7B1B61163E492A4B63774E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E40834D235DE44DF4F65658D48DA3B76</string>
+			<string>08DC0F0493F69E3CCD38CE8EDDD543E1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>35E170942DD5640B1D0514D4F4F4F879</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFHTTPClient.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>36868F27029CC729659D383EBDA93220</key>
 		<dict>
@@ -694,10 +799,10 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>3984B98BF36300164D3E0D48554C0889</key>
+		<key>3B1A6084CDA2F3F4E34F25C57F28355C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>231D44CBF0117FF2E48CA965F105D180</string>
+			<string>0A6C5E7AB028786FA6ADCBA2FA2880B7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -869,33 +974,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>44CC8C087924CBEA78533436083DA4B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFResponseConstructor.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>454E7CEB460ED9A4A735829861D0B2CD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B0BE74438DC743FCA4610E7F4405C0C4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>456884974FCD65674016A0D296E8D846</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -910,6 +988,20 @@
 			<string>AFNetworking/AFNetworkReachabilityManager.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>45A46AC63FF864DFB85536DB76114972</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F960C42055074884B6A5432E532D6779</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>47BEF9D903506B003EA5C2B249729489</key>
 		<dict>
@@ -989,33 +1081,12 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>487367B60E08827C036ABF1110601891</key>
+		<key>4D0980DDEFB759CA19F6883F089627B3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>70FB2D9F8E0C3E09EE9525506E75D048</string>
+			<string>16DB228E09FC43E6B5DF9C043AD29D05</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4CB2F04E62E0B7EA4D335FE6A89CA4C7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FD10B26E95DFD7A41DC16D9522E81A37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>4DDDAFE16F1C06EFAE434D84600766A8</key>
 		<dict>
@@ -1039,13 +1110,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4F50E507E633FEFC5BFCB4E43BD9D4ED</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A8A7E65F3EEAF91E726CBE82B8BEE794</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>4F76F9403AF7977BC2F5D0920E7A6236</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1066,32 +1130,18 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>52A955A3C657841DD4E6F40BD9A924F4</key>
+		<key>50B3AD5ED68455EA01018859D480951D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>SLAFHTTPService.h</string>
+			<string>SLAFRequestGenerator.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52F62085519645EFC5DA96392E2CD980</key>
-		<dict>
-			<key>fileRef</key>
-			<string>35E170942DD5640B1D0514D4F4F4F879</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>5354B0280CA30EA19E3E9A4AFD907E15</key>
 		<dict>
@@ -1103,6 +1153,20 @@
 			<string>Pods-SunbeamLatestAFService_Tests.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>536544457BE5C98F2350D1D058E70DBC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1187175FA888128293ED2E7C1F88E789</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>5461D992F0D803F0F05DF72B2849301D</key>
 		<dict>
@@ -1269,19 +1333,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5DDBFAC87A493795C918595E5CB4AA06</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFResponse.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>5FF6453E55785669885F626B853FD2AA</key>
 		<dict>
 			<key>fileRef</key>
@@ -1318,7 +1369,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>622286ED1D2043ACB6166A82ADD356B6</key>
+		<key>61B9438BE0FBC9D4FFCEA31A64512015</key>
+		<dict>
+			<key>fileRef</key>
+			<string>239B438FAFDF84DC4E4B8F087DA44B26</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>62D587F0A6AED479A2FCF8B0CC43D796</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1327,7 +1392,27 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>SLAFRequestGenerator.m</string>
+			<string>SLAFHTTPService.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>633F02B93A878BE7BDF8E358617916B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83E16F10E656D9DE438587C3FBDDF16B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>63904B9DB052383CDA9F8522B5C808AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFServiceFactory.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1371,20 +1456,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>64F0D9F15CE81B2D60613669DEEE4FBC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5DDBFAC87A493795C918595E5CB4AA06</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>659960F7E28E993E08CCC1E8A383E710</key>
 		<dict>
 			<key>fileRef</key>
@@ -1399,7 +1470,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>66629030D3C2EC32FCCAD774E5144BAD</key>
+		<key>67A69E146B86A5319CC562B4A1117D51</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1408,7 +1479,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>SLAFBaseManager.m</string>
+			<string>SLAFTool.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1446,9 +1517,9 @@
 			<string>6400EA9738F376478C413D31DD0EBC09</string>
 			<key>buildPhases</key>
 			<array>
-				<string>DEBA2E12BC4839124E71B66A2F5DB024</string>
+				<string>305DE1E256E3C69E7C57A874E841AF57</string>
 				<string>3835009FF78EAB54D0634558FEE82CCF</string>
-				<string>E753CA566C7D06D1C2D714F1DDFC3852</string>
+				<string>7CA72EA5D06D05F7842F57D6CAA86D4C</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -1493,19 +1564,6 @@
 			<string>AFNetworkActivityIndicatorManager.m</string>
 			<key>path</key>
 			<string>UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6B20FE84FF53C99950B476FB71FA8092</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFServiceFactory.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1619,19 +1677,12 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6D8E494E7D1E6931C5A2220CC2056665</key>
+		<key>6C9E22DEE60970526D82D741DF54F12C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2E9503C7095DED279D222C99163C2ACF</string>
+			<string>62D587F0A6AED479A2FCF8B0CC43D796</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>6E8E3583AF05099FA9CD8B45C147F43D</key>
 		<dict>
@@ -1660,19 +1711,6 @@
 			<string>9B5EF98E2B153C6459F4BC74A2940581</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>70FB2D9F8E0C3E09EE9525506E75D048</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFBaseService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>7332F15718920917F544F35CE2C038AA</key>
 		<dict>
@@ -1703,20 +1741,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>760B9BFA866218F02B5EFD8530E304F5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9D60ADB36B3EF54F5CEAB8EA572599FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>7665AEA377C67B7EAB50A42AA849B66C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1745,6 +1769,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>7BE9EC27583277B82A8CB141EFD6D842</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9FFF294D0765D05282B56DE7CC4829AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>7C6A0D99A9CC32A19A92A62F8A941139</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1770,6 +1808,33 @@
 				<string>D9F4E833E37B611B432F6B5D7072DDA2</string>
 				<string>C6354FEC7728A4C86DAD8092509BA7D4</string>
 				<string>AE2A07407FB50BA249984DC0620E84C0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7CA72EA5D06D05F7842F57D6CAA86D4C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>536544457BE5C98F2350D1D058E70DBC</string>
+				<string>ECF8CB378A56B3C0CD20CB4132E1E91E</string>
+				<string>D1074F831DBC26FEA8B775AE117EBDE0</string>
+				<string>61B9438BE0FBC9D4FFCEA31A64512015</string>
+				<string>ACE7EC098E7FCA251C1B31E94F6F5190</string>
+				<string>7BE9EC27583277B82A8CB141EFD6D842</string>
+				<string>45A46AC63FF864DFB85536DB76114972</string>
+				<string>124E108EAE6500CFC9C020265575D96D</string>
+				<string>28CA848249E834200250E1384A3892DB</string>
+				<string>10FA796FC300A9E2F00CFEB280BBADCC</string>
+				<string>FCB7BF33E6FA606791BF06A413DB4998</string>
+				<string>0916754B750DF1517D9BF805872F8B8C</string>
+				<string>110DE4AF345038248BCDD77CD9CE87B2</string>
+				<string>354C9F743F7B1B61163E492A4B63774E</string>
+				<string>305185F7F2E6B226A8DFC8721A2DDFC7</string>
 			</array>
 			<key>isa</key>
 			<string>PBXHeadersBuildPhase</string>
@@ -1830,13 +1895,6 @@
 			<string>Reachability</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>823B6EFCE8324897EA52B212425817DD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>622286ED1D2043ACB6166A82ADD356B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>8289CD1B87A16A1A5C91F34247DC74C8</key>
 		<dict>
@@ -1924,19 +1982,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>84D38BF9120958903A52C2F37E090A2A</key>
+		<key>83E16F10E656D9DE438587C3FBDDF16B</key>
 		<dict>
-			<key>fileRef</key>
-			<string>F15589FD39D69A7858AD6D75A48DFCF0</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFServiceContext.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>85053C33AB5B93D2852851105AAA32B1</key>
 		<dict>
@@ -1998,13 +2055,6 @@
 			<string>UIKit+AFNetworking/UIKit+AFNetworking.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8901479160223866ACBC0637356EC025</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BF7F66BE24DA1FB7DC0483230E90A0E6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>8930A9FBDA2D9196B2E0B7129AA08237</key>
 		<dict>
@@ -2096,6 +2146,19 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>8A4D17EB9F7E37089C084C42B6F2B493</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFRequest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8A5EAD5A8C25ECA84AA2E4C0A7CB9C14</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -2110,19 +2173,6 @@
 			<string>Pods-SunbeamLatestAFService_Tests.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8C68297AAE1AB9A3529F226AF40EA57A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFServiceContext.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8DD046F7FCE6E3DDF168C9AD96C59FED</key>
 		<dict>
@@ -2157,6 +2207,39 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Security.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>8F5B4DDFA84BD8119FB2CA1C4FEDAB52</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFHTTPSessionManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FCD056D2A45ADF4C1DA9E4F014408CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFServiceContext.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FE7553AB5407FA41948855C017A86C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A0891D8D9D0EBB9C1D1FD9E8D29E0CAF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>907EBD05C24D3EC8D81F3A5FEE84121C</key>
 		<dict>
@@ -2267,19 +2350,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9B61A978552189FAD6C99FFA8B926E42</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>9D50120199D89DA442E06C944E2F6A11</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2290,19 +2360,6 @@
 			<string>text.xcconfig</string>
 			<key>path</key>
 			<string>Pods-SunbeamLatestAFService_Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9D60ADB36B3EF54F5CEAB8EA572599FF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SunbeamLatestAFService.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2319,6 +2376,32 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>9FFF294D0765D05282B56DE7CC4829AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFRequest.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A0891D8D9D0EBB9C1D1FD9E8D29E0CAF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SLAFBaseService.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A1446CF4013A51DE42B1BE38088D51CE</key>
 		<dict>
@@ -2363,19 +2446,6 @@
 			<string>69DAA8D29D605736A0994260EEE74150</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>A8A7E65F3EEAF91E726CBE82B8BEE794</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFResponse.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>AAF678CED40D3499169D10F63CA0719E</key>
 		<dict>
@@ -2484,13 +2554,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>ABB0F0A2BA2E3A146C098E1D94EF5291</key>
-		<dict>
-			<key>fileRef</key>
-			<string>66629030D3C2EC32FCCAD774E5144BAD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>AC044B65E2FB02CB420DF9AE625B92F2</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -2551,12 +2614,32 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>ACA834DC76F724513A76BF81F94A8055</key>
+		<key>AC16B6B595B9E0EDCE830C5F7D0BE2FB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFResponseConstructor.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ACE7EC098E7FCA251C1B31E94F6F5190</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EBC84E0DA7A7C94521C38F0AA8779E9D</string>
+			<string>C72EE5F31D21D5259AFB8E86F1B3375F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>AE2A07407FB50BA249984DC0620E84C0</key>
 		<dict>
@@ -2592,16 +2675,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B0BE74438DC743FCA4610E7F4405C0C4</key>
+		<key>B0F757CC83FDB2AC285B60C669398687</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>SLAFServiceProperty.h</string>
+			<string>SLAFResponseConstructor.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2643,19 +2726,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B6F1CA151EDF32271745EE26A996F2C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFBaseManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>B775F2CB1A9FB265DAF8C6F05776A69E</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2675,6 +2745,13 @@
 		<dict>
 			<key>fileRef</key>
 			<string>55C739F1127D7E94D9137583AECFCC0E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BA5C5DDC85BB7BE0554252DF8F7760A7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>50B3AD5ED68455EA01018859D480951D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2730,19 +2807,6 @@
 			<string>8A5EAD5A8C25ECA84AA2E4C0A7CB9C14</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>BF7F66BE24DA1FB7DC0483230E90A0E6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFRequest.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C015C5E223184310A507F6F6D795AB1F</key>
 		<dict>
@@ -2861,6 +2925,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>C1CA200763FD3F55B62FEC59AC68D1AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFHTTPClient.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>C1D85E1F24093D449A7CAC503CFEE542</key>
 		<dict>
 			<key>containerPortal</key>
@@ -2887,6 +2964,36 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>C400E93C144689331094B022F09F2364</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1187175FA888128293ED2E7C1F88E789</string>
+				<string>16DB228E09FC43E6B5DF9C043AD29D05</string>
+				<string>C5CEE57318B232A02211FCE56FE44771</string>
+				<string>A0891D8D9D0EBB9C1D1FD9E8D29E0CAF</string>
+				<string>8FCD056D2A45ADF4C1DA9E4F014408CE</string>
+				<string>83E16F10E656D9DE438587C3FBDDF16B</string>
+				<string>F7F70034FD0E005DB211D15644056043</string>
+				<string>63904B9DB052383CDA9F8522B5C808AB</string>
+				<string>CBCC2D7E69DFAD896E3615E0F8A7EC63</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BASE</string>
+			<key>path</key>
+			<string>BASE</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C4290D575A92755BF0FC0244C67804D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8F5B4DDFA84BD8119FB2CA1C4FEDAB52</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>C45D249FB5DB8E034FDE4F14853D1D8B</key>
 		<dict>
@@ -2921,19 +3028,18 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>C5739BB4730274950CE500AA79784DF7</key>
+		<key>C5CEE57318B232A02211FCE56FE44771</key>
 		<dict>
-			<key>fileRef</key>
-			<string>B6F1CA151EDF32271745EE26A996F2C0</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFBaseService.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C6354FEC7728A4C86DAD8092509BA7D4</key>
 		<dict>
@@ -2948,6 +3054,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>C72EE5F31D21D5259AFB8E86F1B3375F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFHTTPSessionManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C7F28EA56E4740714E20E6548D3D1AA8</key>
 		<dict>
@@ -2987,6 +3106,26 @@
 				</array>
 			</dict>
 		</dict>
+		<key>CB2FD2655C69952513EFE4295C81F38D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B0F757CC83FDB2AC285B60C669398687</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CBCC2D7E69DFAD896E3615E0F8A7EC63</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFServiceProperty.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>CFA8D6B529A0EBFF0316F2629AB2556E</key>
 		<dict>
 			<key>fileRef</key>
@@ -3007,10 +3146,10 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>D1A62860F8D40527D2ACC6FE0E28B5C3</key>
+		<key>D1074F831DBC26FEA8B775AE117EBDE0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>08DC0F0493F69E3CCD38CE8EDDD543E1</string>
+			<string>C1CA200763FD3F55B62FEC59AC68D1AB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3020,31 +3159,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>D3520ADC3E0DD3EDCACDA6C642F75477</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C68297AAE1AB9A3529F226AF40EA57A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D35AFFD39FEB1800157330A7B0D7ACF6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9D60ADB36B3EF54F5CEAB8EA572599FF</string>
-				<string>F1B7AB4AD7CC3F263DB7174133E4A8CC</string>
-				<string>E4776F2CD2C53772D11BA5E6F3EEB43A</string>
-				<string>F604739B2498925F6453454D649D43EB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -3103,6 +3217,48 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>D6DCFC2EC6E40FE0B31E5131F4B88A7C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFResponse.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D74D6DE4B47A47850F886A7EAAA0DBD3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFTool.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D97D5537EE8249FEAF3606CB7F20F32B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D74D6DE4B47A47850F886A7EAAA0DBD3</string>
+				<string>67A69E146B86A5319CC562B4A1117D51</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>TOOL</string>
+			<key>path</key>
+			<string>TOOL</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D9F4E833E37B611B432F6B5D7072DDA2</key>
 		<dict>
 			<key>fileRef</key>
@@ -3117,43 +3273,12 @@
 				</array>
 			</dict>
 		</dict>
-		<key>DC453CDAD0A5F6CF560785E4174346C4</key>
+		<key>DD5FB0CE19C8C774CEF631E0FF7C1362</key>
 		<dict>
 			<key>fileRef</key>
-			<string>44CC8C087924CBEA78533436083DA4B4</string>
+			<string>67A69E146B86A5319CC562B4A1117D51</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DEBA2E12BC4839124E71B66A2F5DB024</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>ABB0F0A2BA2E3A146C098E1D94EF5291</string>
-				<string>13C354C1527B5120DCBD4B237899D8C2</string>
-				<string>ACA834DC76F724513A76BF81F94A8055</string>
-				<string>1208DD2C65078B8B987314DA0DAA434B</string>
-				<string>8901479160223866ACBC0637356EC025</string>
-				<string>823B6EFCE8324897EA52B212425817DD</string>
-				<string>4F50E507E633FEFC5BFCB4E43BD9D4ED</string>
-				<string>02C57764F677AB310AFCBA7E4A1743DF</string>
-				<string>D3520ADC3E0DD3EDCACDA6C642F75477</string>
-				<string>EE76C4B4E71142791985808D4B060975</string>
-				<string>3984B98BF36300164D3E0D48554C0889</string>
-				<string>355CC812DBFBB6E11864EA33B766716B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>DFE852DDCC648EC4B7568A74493865AB</key>
 		<dict>
@@ -3172,6 +3297,19 @@
 			<string>16B66C0AEBC9F9724A670DCF79BE4531</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>E00FEDF5D90FF617FE6422B60FBB1695</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SunbeamLatestAFService.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>E06C4D570ABCF18D8095B9111D3D3F98</key>
 		<dict>
@@ -3225,32 +3363,6 @@
 			<string>Support Files</string>
 			<key>path</key>
 			<string>Example/Pods/Target Support Files/SunbeamLatestAFService</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E233722B40DAC9C75FD5B6CE70461034</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFResponseConstructor.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E25D096C60B9FD405C652990A5CBBB7A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFRequestGenerator.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3319,32 +3431,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E4776F2CD2C53772D11BA5E6F3EEB43A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>35E170942DD5640B1D0514D4F4F4F879</string>
-				<string>EBC84E0DA7A7C94521C38F0AA8779E9D</string>
-				<string>52A955A3C657841DD4E6F40BD9A924F4</string>
-				<string>1ED41602544636DDB6140676C98F1D5F</string>
-				<string>FD10B26E95DFD7A41DC16D9522E81A37</string>
-				<string>BF7F66BE24DA1FB7DC0483230E90A0E6</string>
-				<string>E25D096C60B9FD405C652990A5CBBB7A</string>
-				<string>622286ED1D2043ACB6166A82ADD356B6</string>
-				<string>5DDBFAC87A493795C918595E5CB4AA06</string>
-				<string>A8A7E65F3EEAF91E726CBE82B8BEE794</string>
-				<string>44CC8C087924CBEA78533436083DA4B4</string>
-				<string>E233722B40DAC9C75FD5B6CE70461034</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CLIENT</string>
-			<key>path</key>
-			<string>CLIENT</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E6E0C171634A123A0E7FC39F44FA05D2</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3360,32 +3446,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E753CA566C7D06D1C2D714F1DDFC3852</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5739BB4730274950CE500AA79784DF7</string>
-				<string>487367B60E08827C036ABF1110601891</string>
-				<string>52F62085519645EFC5DA96392E2CD980</string>
-				<string>047F5A96A8868C2141460F5119F86E27</string>
-				<string>4CB2F04E62E0B7EA4D335FE6A89CA4C7</string>
-				<string>348617ACAB54D73C67A1FA16D033213B</string>
-				<string>64F0D9F15CE81B2D60613669DEEE4FBC</string>
-				<string>DC453CDAD0A5F6CF560785E4174346C4</string>
-				<string>6D8E494E7D1E6931C5A2220CC2056665</string>
-				<string>84D38BF9120958903A52C2F37E090A2A</string>
-				<string>454E7CEB460ED9A4A735829861D0B2CD</string>
-				<string>3465B6164F5F9AF7DE710CE48E07B5CC</string>
-				<string>D1A62860F8D40527D2ACC6FE0E28B5C3</string>
-				<string>760B9BFA866218F02B5EFD8530E304F5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>E7988678C81F7CCB95D239375FC6986D</key>
 		<dict>
 			<key>fileRef</key>
@@ -3399,6 +3459,13 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>E9CBC569B5DA59A1370672C2141F1C01</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E40834D235DE44DF4F65658D48DA3B76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>EB9F5DA3051DAC003422E54B3B4A6E9D</key>
 		<dict>
@@ -3415,6 +3482,34 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>EBB6BE3BAB390B94D4E895D4C45346CA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C1CA200763FD3F55B62FEC59AC68D1AB</string>
+				<string>2E71B442C784FBB9B53F98D59DA84CC1</string>
+				<string>239B438FAFDF84DC4E4B8F087DA44B26</string>
+				<string>62D587F0A6AED479A2FCF8B0CC43D796</string>
+				<string>C72EE5F31D21D5259AFB8E86F1B3375F</string>
+				<string>8F5B4DDFA84BD8119FB2CA1C4FEDAB52</string>
+				<string>9FFF294D0765D05282B56DE7CC4829AF</string>
+				<string>8A4D17EB9F7E37089C084C42B6F2B493</string>
+				<string>F960C42055074884B6A5432E532D6779</string>
+				<string>50B3AD5ED68455EA01018859D480951D</string>
+				<string>D6DCFC2EC6E40FE0B31E5131F4B88A7C</string>
+				<string>0A6C5E7AB028786FA6ADCBA2FA2880B7</string>
+				<string>AC16B6B595B9E0EDCE830C5F7D0BE2FB</string>
+				<string>B0F757CC83FDB2AC285B60C669398687</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CLIENT</string>
+			<key>path</key>
+			<string>CLIENT</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EBC4C7A344DDC5FF70C5F738D8934970</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3425,19 +3520,6 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-SunbeamLatestAFService_Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EBC84E0DA7A7C94521C38F0AA8779E9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFHTTPClient.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3455,12 +3537,19 @@
 				</array>
 			</dict>
 		</dict>
-		<key>EE76C4B4E71142791985808D4B060975</key>
+		<key>ECF8CB378A56B3C0CD20CB4132E1E91E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6B20FE84FF53C99950B476FB71FA8092</string>
+			<string>C5CEE57318B232A02211FCE56FE44771</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>EECF143AE392C1D26B1C57DFCCC39E7E</key>
 		<dict>
@@ -3503,42 +3592,6 @@
 			<string>UIProgressView+AFNetworking.h</string>
 			<key>path</key>
 			<string>UIKit+AFNetworking/UIProgressView+AFNetworking.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F15589FD39D69A7858AD6D75A48DFCF0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFServiceFactory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1B7AB4AD7CC3F263DB7174133E4A8CC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B6F1CA151EDF32271745EE26A996F2C0</string>
-				<string>66629030D3C2EC32FCCAD774E5144BAD</string>
-				<string>70FB2D9F8E0C3E09EE9525506E75D048</string>
-				<string>FF1EE6EBFDD7342B2383B57273CA6F5D</string>
-				<string>2E9503C7095DED279D222C99163C2ACF</string>
-				<string>8C68297AAE1AB9A3529F226AF40EA57A</string>
-				<string>F15589FD39D69A7858AD6D75A48DFCF0</string>
-				<string>6B20FE84FF53C99950B476FB71FA8092</string>
-				<string>B0BE74438DC743FCA4610E7F4405C0C4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>BASE</string>
-			<key>path</key>
-			<string>BASE</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3623,22 +3676,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F604739B2498925F6453454D649D43EB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9B61A978552189FAD6C99FFA8B926E42</string>
-				<string>231D44CBF0117FF2E48CA965F105D180</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TOOL</string>
-			<key>path</key>
-			<string>TOOL</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>F650DA2837176EF59DCD0A9315D0FEE8</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3676,6 +3713,32 @@
 			<key>targetProxy</key>
 			<string>C1D85E1F24093D449A7CAC503CFEE542</string>
 		</dict>
+		<key>F7F70034FD0E005DB211D15644056043</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFServiceFactory.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F960C42055074884B6A5432E532D6779</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SLAFRequestGenerator.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>F9D873FB8821514B1733937602D1C2CB</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -3689,18 +3752,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>FD10B26E95DFD7A41DC16D9522E81A37</key>
+		<key>FCB7BF33E6FA606791BF06A413DB4998</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>F7F70034FD0E005DB211D15644056043</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SLAFRequest.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>FDD03D0BE06A3B18AD76D92D8234FBBB</key>
 		<dict>
@@ -3714,19 +3778,6 @@
 			<string>AFAutoPurgingImageCache.h</string>
 			<key>path</key>
 			<string>UIKit+AFNetworking/AFAutoPurgingImageCache.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FF1EE6EBFDD7342B2383B57273CA6F5D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SLAFBaseService.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

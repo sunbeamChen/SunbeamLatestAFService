@@ -30,6 +30,9 @@
         } else if (error.code == NSURLErrorBadServerResponse) {
             code = BAD_SERVER_RESPONSE_ERROR;
             message = @"server response is error";
+        } else if (error.code == NSURLErrorCancelled) {
+            code = REQUEST_IS_CANCELED;
+            message = @"request is canceled";
         }
         
         return [NSError errorWithDomain:SLAF_ERROR_DOMAIN code:code userInfo:@{NSLocalizedDescriptionKey:message}];

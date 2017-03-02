@@ -9,22 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "SLAFServiceProperty.h"
 #import "SLAFResponse.h"
-
-#define SLAF_SERVICE_VERSION @"0.1.19"
+#import "SLAFHTTPSessionManager.h"
 
 @interface SLAFHTTPClient : NSObject
-
-/**
- session任务列表 {"requestId":NSURLSessionTask}
- */
-@property (nonatomic, strong, readonly) NSMutableDictionary* sessionTaskQueue;
-
-/**
- 单例
-
- @return SLAFHTTPClient
- */
-+ (SLAFHTTPClient *) sharedSLAFHTTPClient;
 
 /**
  Get/Post
@@ -64,17 +51,5 @@
  @return 请求id
  */
 - (NSNumber *) loadDownloadTask:(NSString *) URI identifier:(NSString *) identifier method:(SLAF_REQUEST_METHOD) method params:(NSDictionary *) params downloadUrl:(NSString *) downloadUrl downloadProgressBlock:(void (^)(NSProgress *downloadProgress))downloadProgressBlock completion:(void (^)(SLAFResponse* response)) completion;
-
-/**
- 取消所有网络请求
- */
-- (void) cancelAllRequest;
-
-/**
- 取消指定requestId的网络请求
-
- @param requestId 请求id
- */
-- (void) cancelRequest:(NSNumber *) requestId;
 
 @end

@@ -39,7 +39,7 @@
 
 - (void)dealloc
 {
-    [[SLAFHTTPClient sharedSLAFHTTPClient] cancelAllRequest];
+    //[[SLAFHTTPSessionManager sharedSLAFHTTPSessionManager] cancelAllRequest];
 }
 
 - (NSNumber *) loadDataTask:(void(^)(NSString* identifier, id responseObject, NSError* error)) completion
@@ -59,7 +59,7 @@
     __weak __typeof__(self) weakSelf = self;
     if (self.childManager.method == GET || self.childManager.method == POST) {
         // get请求、post请求
-        return [[SLAFHTTPClient sharedSLAFHTTPClient] loadDataTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params completion:^(SLAFResponse *response) {
+        return [[[SLAFHTTPClient alloc] init] loadDataTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params completion:^(SLAFResponse *response) {
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
             if (response.error == nil) {
                 id jsonData = [strongSelf formatResponseData:response.responseObject];
@@ -109,7 +109,7 @@
     
     __weak __typeof__(self) weakSelf = self;
     if (self.childManager.method == UPLOAD) {
-        return [[SLAFHTTPClient sharedSLAFHTTPClient] loadUploadTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params uploadFiles:uploadFiles uploadProgressBlock:uploadProgressBlock completion:^(SLAFResponse *response) {
+        return [[[SLAFHTTPClient alloc] init] loadUploadTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params uploadFiles:uploadFiles uploadProgressBlock:uploadProgressBlock completion:^(SLAFResponse *response) {
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
             if (response.error == nil) {
                 id jsonData = [strongSelf formatResponseData:response.responseObject];
@@ -158,7 +158,7 @@
     
     __weak __typeof__(self) weakSelf = self;
     if (self.childManager.method == DOWNLOAD) {
-        return [[SLAFHTTPClient sharedSLAFHTTPClient] loadDownloadTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params downloadUrl:downloadUrl downloadProgressBlock:downloadProgressBlock completion:^(SLAFResponse *response) {
+        return [[[SLAFHTTPClient alloc] init] loadDownloadTask:self.childManager.URI identifier:self.childManager.identifier method:self.childManager.method params:params downloadUrl:downloadUrl downloadProgressBlock:downloadProgressBlock completion:^(SLAFResponse *response) {
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
             if (response.error == nil) {
                 completion(strongSelf.childManager.identifier, response.downloadFileUrl, nil);
@@ -194,11 +194,15 @@
     }
     
     // 判断当前是否有网络请求正在执行(取决于是否支持多个请求同时执行)
-    if ([[SLAFHTTPClient sharedSLAFHTTPClient].sessionTaskQueue count] > 0)
+    if ([[SLAFHTTPSessionManager sharedSLAFHTTPSessionManager] requestIsRunning])
     {
-        //TODO:该处采取的策略是阻止新的请求，另外一种策略是取消旧的请求，执行新的请求(待实际测试判断)
-        
-        return [NSError errorWithDomain:SLAF_ERROR_DOMAIN code:REQUEST_RUNING_ERROR userInfo:@{NSLocalizedDescriptionKey:@"network request is busy"}];
+        if ([SLAFServiceContext sharedSLAFServiceContext].requestRunningStrategy == RUNNING_FIRST_IN) {
+            // 该处采取的策略是阻止新的请求，执行旧的请求
+            return [NSError errorWithDomain:SLAF_ERROR_DOMAIN code:REQUEST_RUNING_ERROR userInfo:@{NSLocalizedDescriptionKey:@"network request is busy"}];
+        } else if ([SLAFServiceContext sharedSLAFServiceContext].requestRunningStrategy == RUNNING_LAST_IN) {
+            // 该处采取的策略是取消旧的请求，执行新的请求
+            [[SLAFHTTPSessionManager sharedSLAFHTTPSessionManager] cancelAllRequest];
+        }
     }
     
     // 判断网络请求参数是否合法，错误会返回NSError（由外部判断后返回）
